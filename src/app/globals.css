@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fffbf8;
+  --color-on-tertiary-fixed: #2b160a;
+  --color-on-primary-container: #301400;
+  --color-primary-fixed-dim: #ffb68f;
+  --color-surface-container-low: #fef2ea;
+  --color-on-primary: #ffffff;
+  --color-on-secondary-fixed-variant: #402f08;
+  --color-secondary-fixed-dim: #efc994;
+  --color-primary-container: #ffdcc6;
+  --color-primary: #f36a0b;
+  --color-outline-variant: #d6c3b8;
+  --color-surface-container-high: #f4e6dd;
+  --color-surface-container-highest: #eee0d7;
+  --color-secondary-fixed: #ffdfb4;
+  --color-tertiary-container: #ffdcc8;
+  --color-surface-dim: #e2d4cb;
+  --color-surface-container: #faebe3;
+  --color-on-tertiary-fixed-variant: #482a1b;
+  --color-on-error-container: #410002;
+  --color-on-error: #ffffff;
+  --color-inverse-primary: #ffb68f;
+  --color-tertiary-fixed: #ffdbca;
+  --color-primary-fixed: #ffdbcb;
+  --color-on-secondary-container: #2b200b;
+  --color-on-primary-fixed-variant: #522300;
+  --color-secondary: #EFD9B4;
+  --color-outline: #847368;
+  --color-error: #ba1a1a;
+  --color-on-primary-fixed: #301400;
+  --color-on-tertiary-container: #2b160a;
+  --color-error-container: #ffdad6;
+  --color-surface-variant: #f3dfd2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-tint: #f36a0b;
+  --color-secondary-container: #fff8ee;
+  --color-inverse-surface: #352f2b;
+  --color-inverse-on-surface: #faebe3;
+  --color-on-surface-variant: #52443a;
+  --color-on-secondary: #433215;
+  --color-tertiary: #a47863;
+  --color-on-secondary-fixed: #251a00;
+  --color-on-background: #201a17;
+  --color-surface: #fffbf8;
+  --color-surface-bright: #fffbf8;
+  --color-on-surface: #201a17;
+  --color-tertiary-fixed-dim: #e2b49e;
+  --color-on-tertiary: #ffffff;
+
+  --spacing-max_width: 1200px;
+  --spacing-gutter: 24px;
+  --spacing-xxl: 80px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-unit: 4px;
+  --spacing-margin: 32px;
+  --spacing-xl: 48px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+
+  --font-button: "Manrope", sans-serif;
+  --font-body-md: "Manrope", sans-serif;
+  --font-body-lg: "Manrope", sans-serif;
+  --font-h1: "Noto Serif", serif;
+  --font-h3: "Noto Serif", serif;
+  --font-label-caps: "Manrope", sans-serif;
+  --font-h2: "Noto Serif", serif;
+}
+
+@utility text-button {
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+@utility text-body-md {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+@utility text-body-lg {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+@utility text-h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+@utility text-h3 {
+  font-size: 28px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+@utility text-label-caps {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+@utility text-h2 {
+  font-size: 36px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+}
