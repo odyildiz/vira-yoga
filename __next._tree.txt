@@ -1,0 +1,9 @@
+:HL["/vira-yoga/_next/static/chunks/0619-.a30qkon.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Noto+Serif:wght@400&display=swap","style"]
+:HL["https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap","style"]
+:HL["https://lh3.googleusercontent.com/aida-public/AB6AXuD0KhOy0aSWagfIxL2WU_DUzIvakRAg4_031NjFuXMHMwpLVjDRIfgUZDhBngIVhRCxrLWe1l1QF8YDyspf7iy1zTN8ACFxfnJb_pEWXLtdDEWYUTKyQiDX6C8QCVIPK2xxWBheTZc8sPAO4QKU7iPlbUjFbsRvcj9kqH9TVXcRBtQvsmjif0yAlTyXqGvB1OqWRMT4tEI18aoTzc-fU3TIiiOhGiyIiCbH6mJlmAPW6Yc7nyFJ6iwLiKHrOvyPCs7ld6eOUpIoUulD","image"]
+:HL["https://lh3.googleusercontent.com/aida-public/AB6AXuC6T8YGtWtdYnzpujYnvXhzoiF4MsJYqpl5yIwswQQ5xY80PQPr7iOw_C5EoqdCR_SEJRuB1_3T2H39YOvvqQWfuPY_mMzaRYtW6n8WSgYFsWJEZcJdVRDClwRTyoB4h7j8Hji5biKVD3wCYauRNCaYlZFkhNQtIzjWCHeCl-pjV9EL5HXhhKiYve0NyvVzIp3f9McnAXskpcvPVjFwXHvEYk72YkyT4eNqSZgMdHMYHGUEF49oi6A__Su-PpFhuHqiPvrmFfUDjwqN","image"]
+:HL["https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop","image"]
+:HL["https://images.pexels.com/photos/32062397/pexels-photo-32062397/free-photo-of-group-meditation-session-in-yoga-class.jpeg","image"]
+:HL["https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Aerial_Yoga.jpg/500px-Aerial_Yoga.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"2McTRZ6BWTAaUtQZC7hI0"}
