@@ -7,7 +7,15 @@ interface Props {
 export default function TeacherCard({ teacher }: Props) {
   return (
     <div className="bg-surface rounded-xl p-margin border border-surface-dim text-center">
-      <div className="w-24 h-24 rounded-full bg-surface-variant mx-auto mb-4"></div>
+      {teacher.image ? (
+        <img
+          src={teacher.image}
+          alt={teacher.name}
+          className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+        />
+      ) : (
+        <div className="w-24 h-24 rounded-full bg-surface-variant mx-auto mb-4"></div>
+      )}
       <h3 className="font-h3 text-xl text-on-background">{teacher.name}</h3>
       <p className="text-on-surface-variant text-sm mt-2">{teacher.specialty}</p>
       <div className="flex justify-center items-center gap-4 mt-4">
@@ -40,7 +48,6 @@ export default function TeacherCard({ teacher }: Props) {
             href={teacher.socials.facebook}
             className="text-on-surface-variant hover:text-primary transition-colors"
           >
-            {/* Using a generic SVG for facebook/third icon just to show the placeholder */}
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
             </svg>

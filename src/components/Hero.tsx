@@ -12,7 +12,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover shadow-[0_20px_50px_rgba(249,115,22,0.3)]"
       >
-        <source src="/yoga.mp4" type="video/mp4" />
+        <source src="/vira-yoga/yoga.mp4" type="video/mp4" />
       </video>
       <div className="relative z-20 px-8 md:px-16 lg:px-24 w-full flex flex-col items-start text-left mt-24">
         <h1 className="font-h1 text-[42px] leading-tight md:text-[64px] text-white tracking-widest mb-6 opacity-90 drop-shadow-md max-w-3xl">

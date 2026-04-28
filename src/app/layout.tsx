@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Vira Yoga - Şehirde Topraklanma",
-  description: "Şehrin kalbinde, Vira Yoga bir anlık mola sunar.",
+  title: "Vira Yoga | Kadıköydeki Eviniz",
+  description: "Kadıköyün kalbinde, Vira Yoga ile bir anlık mola.",
 };
 
 export default function RootLayout({

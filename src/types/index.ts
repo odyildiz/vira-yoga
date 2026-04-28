@@ -8,6 +8,7 @@ export interface Schedule {
   instructor: string;
   studio: string;
   opacity?: number;
+  image?: string;
 }
 
 export interface ClassInfo {
@@ -23,6 +24,7 @@ export interface Teacher {
   id: string;
   name: string;
   specialty: string;
+  image?: string;
   socials: {
     instagram?: string;
     twitter?: string;
@@ -35,6 +37,7 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   slug: string;
+  image?: string;
 }
 
 export interface Membership {
@@ -46,6 +49,7 @@ export interface Membership {
   features: string[];
   highlight?: string;
   buttonText: string;
+  image?: string;
 }
 
 export interface ContactInfo {
@@ -53,6 +57,7 @@ export interface ContactInfo {
   icon: string;
   title: string;
   details: React.ReactNode | string;
+  image?: string;
   action: {
     text: string;
     icon?: string;

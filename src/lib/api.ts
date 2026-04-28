@@ -11,6 +11,7 @@ export const fetchSchedules = async (): Promise<Schedule[]> => {
       level: "Her Seviye",
       instructor: "Sarah Jenkins",
       studio: "Stüdyo A",
+      image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "2",
@@ -21,6 +22,7 @@ export const fetchSchedules = async (): Promise<Schedule[]> => {
       level: "Her Seviye",
       instructor: "Marcus Chen",
       studio: "Stüdyo B",
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "3",
@@ -32,6 +34,7 @@ export const fetchSchedules = async (): Promise<Schedule[]> => {
       instructor: "Elena Rostova",
       studio: "Bekleme Listesi",
       opacity: 60,
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop",
     },
   ];
 };
@@ -75,17 +78,18 @@ export const fetchTeachers = async (): Promise<Teacher[]> => {
   return [
     {
       id: "1",
-      name: "Sarah Jenkins",
-      specialty: "Vinyasa & Hatha",
+      name: "Selen Şenocak",
+      specialty: "Detaylı Çakra Temizliği",
+      image: "https://instagram.fist11-1.fna.fbcdn.net/v/t51.82787-15/625880335_18344065954225315_5651658455366894653_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=MjY4MTU4MjY1Nzk3OTE3NTEyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY4MHg2ODAuc2RyLkMzIn0%3D&_nc_ohc=CvEo2EXaF18Q7kNvwE5RorB&_nc_oc=AdqxksdwM1zKBDXRN6DE-a183By77lF1lxfgdpgjfzbV2GiwymjrOUy66NWOcef09M8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fist11-1.fna&_nc_gid=_FeBJLcp9AJUCpmD53LBIg&_nc_ss=7a22e&oh=00_Af3cBA5QKRfWxFsrVrTm3wzUE01CwTTWIeNtvQ4-sRgUew&oe=69F6C028",
       socials: {
-        instagram: "#",
-        twitter: "#",
+        instagram: "https://www.instagram.com/selensenocak/",
       },
     },
     {
       id: "2",
       name: "Marcus Chen",
       specialty: "Ashtanga & Meditasyon",
+      image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=600&auto=format&fit=crop",
       socials: {
         instagram: "#",
         twitter: "#",
@@ -96,6 +100,7 @@ export const fetchTeachers = async (): Promise<Teacher[]> => {
       id: "3",
       name: "Elena Rostova",
       specialty: "Yin Yoga & Restoratif",
+      image: "https://images.unsplash.com/photo-1517436073-3b1b1160a57e?q=80&w=600&auto=format&fit=crop",
       socials: {
         instagram: "#",
         twitter: "#",
@@ -112,12 +117,14 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       title: "Şehir Hayatında Topraklanmak",
       excerpt: "Günlük koşuşturmaca içinde merkezimizi nasıl bulabiliriz?",
       slug: "sehir-hayatinda-topraklanmak",
+      image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "2",
       title: "Yin Yoga'nın Derinliklerine İn",
       excerpt: "Bedenin derin dokularına ulaşmanın yolları ve faydaları.",
       slug: "yin-yoganin-derinliklerine-in",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop",
     },
   ];
 };
@@ -131,6 +138,7 @@ export const fetchMemberships = async (): Promise<Membership[]> => {
       price: "₺X",
       features: ["1 grup ders hakkı", "Seçili grup derslerinde geçerli"],
       buttonText: "Satın Al",
+      image: "https://images.unsplash.com/photo-1552196563-552592f13b63?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "2",
@@ -144,6 +152,7 @@ export const fetchMemberships = async (): Promise<Membership[]> => {
         "Temel derslere katılım imkanı",
       ],
       buttonText: "Hemen Başla",
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "3",
@@ -156,6 +165,7 @@ export const fetchMemberships = async (): Promise<Membership[]> => {
         "Tüm grup derslerinde geçerli",
       ],
       buttonText: "Satın Al",
+      image: "https://images.unsplash.com/photo-1517436073-3b1b1160a57e?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "4",
@@ -165,6 +175,7 @@ export const fetchMemberships = async (): Promise<Membership[]> => {
       priceSuffix: " /ay",
       features: ["Sınırsız stüdyo dersi", "Geçerlilik süresi: 30 gün"],
       buttonText: "Satın Al",
+      image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "5",
@@ -174,6 +185,7 @@ export const fetchMemberships = async (): Promise<Membership[]> => {
       priceSuffix: " /3 ay",
       features: ["Sınırsız stüdyo dersi", "Geçerlilik süresi: 90 gün"],
       buttonText: "Satın Al",
+      image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=600&auto=format&fit=crop",
     },
   ];
 };
@@ -185,6 +197,7 @@ export const fetchContacts = async (): Promise<ContactInfo[]> => {
       icon: "location_on",
       title: "Adres",
       details: "Vira Yoga Stüdyosu\nModa Cad. No: 123\nKadıköy, İstanbul",
+      image: "https://images.unsplash.com/photo-1497250681554-182325dd7872?q=80&w=600&auto=format&fit=crop",
       action: {
         text: "Yol Tarifi Al",
         icon: "directions",
@@ -198,6 +211,7 @@ export const fetchContacts = async (): Promise<ContactInfo[]> => {
       icon: "call",
       title: "Telefon",
       details: "+90 (555) 123 45 67\nHafta içi: 09:00 - 20:00",
+      image: "https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=600&auto=format&fit=crop",
       action: {
         text: "Bizi Ara",
         icon: "call",
@@ -210,6 +224,7 @@ export const fetchContacts = async (): Promise<ContactInfo[]> => {
       icon: "mail",
       title: "E-posta",
       details: "info@virayoga.com\niletisim@virayoga.com",
+      image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=600&auto=format&fit=crop",
       action: {
         text: "E-mail Gönder",
         icon: "mail",
