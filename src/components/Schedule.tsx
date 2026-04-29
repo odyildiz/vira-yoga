@@ -13,7 +13,7 @@ export default async function Schedule() {
         </div>
         <div className="flex items-center space-x-4 mt-4 md:mt-0">
           <Link
-            href="#"
+            href="/ders-programi"
             className="font-button text-button px-6 py-2 border border-outline rounded-full hover:bg-surface-container transition-colors duration-300"
           >
             Tüm Haftayı Gör

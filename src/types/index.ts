@@ -11,6 +11,24 @@ export interface Schedule {
   image?: string;
 }
 
+export interface WeeklyScheduleItem {
+  id: number;
+  day: string;
+  start: string;
+  end: string;
+  name: string;
+  teacher: string;
+  level: string;
+  type: string;
+  tags: string[];
+}
+
+export interface ClassDetails {
+  description: string;
+  suitableFor: string;
+  ctas: { label: string; type: "primary" | "secondary"; link: string }[];
+}
+
 export interface ClassInfo {
   id: string;
   title: string;

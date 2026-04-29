@@ -1,4 +1,4 @@
-import { Schedule, ClassInfo, Teacher, BlogPost, Membership, ContactInfo } from "@/types";
+import { Schedule, WeeklyScheduleItem, ClassDetails, ClassInfo, Teacher, BlogPost, Membership, ContactInfo } from "@/types";
 
 export const fetchSchedules = async (): Promise<Schedule[]> => {
   return [
@@ -37,6 +37,50 @@ export const fetchSchedules = async (): Promise<Schedule[]> => {
       image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop",
     },
   ];
+};
+
+export const fetchWeeklySchedules = async (): Promise<WeeklyScheduleItem[]> => {
+  return [
+    { id: 1, day: 'Pazartesi', start: '09:00', end: '10:00', name: 'Hatha Yoga', teacher: 'Ayşe', level: 'Her Seviye', type: 'Hatha', tags: ['Yeni başlayanlara uygun', 'Dengeli tempo'] },
+    { id: 2, day: 'Pazartesi', start: '19:00', end: '20:00', name: 'Vinyasa Yoga', teacher: 'Mert', level: 'Orta Seviye', type: 'Vinyasa', tags: ['Dinamik', 'Akış odaklı'] },
+    { id: 3, day: 'Salı', start: '10:00', end: '11:00', name: 'Yin Yoga', teacher: 'Zeynep', level: 'Her Seviye', type: 'Yin', tags: ['Sakin', 'Gevşeme odaklı'] },
+    { id: 4, day: 'Salı', start: '18:30', end: '19:30', name: 'Başlangıç Yoga', teacher: 'Ayşe', level: 'Yeni Başlayan', type: 'Hatha', tags: ['Yeni başlayanlara uygun', 'Temel duruşlar'] },
+    { id: 5, day: 'Çarşamba', start: '09:00', end: '10:00', name: 'Nefes ve Meditasyon', teacher: 'Zeynep', level: 'Her Seviye', type: 'Nefes', tags: ['Nefes odaklı', 'Sakin'] },
+    { id: 6, day: 'Çarşamba', start: '19:00', end: '20:00', name: 'Hatha Yoga', teacher: 'Ayşe', level: 'Her Seviye', type: 'Hatha', tags: ['Yeni başlayanlara uygun', 'Dengeli tempo'] },
+    { id: 7, day: 'Perşembe', start: '18:30', end: '19:30', name: 'Vinyasa Yoga', teacher: 'Mert', level: 'Orta Seviye', type: 'Vinyasa', tags: ['Dinamik', 'Akış odaklı'] },
+    { id: 8, day: 'Cuma', start: '10:00', end: '11:00', name: 'Yin Yoga', teacher: 'Zeynep', level: 'Her Seviye', type: 'Yin', tags: ['Sakin', 'Gevşeme odaklı'] },
+    { id: 9, day: 'Cumartesi', start: '11:00', end: '12:00', name: 'Başlangıç Yoga', teacher: 'Ayşe', level: 'Yeni Başlayan', type: 'Hatha', tags: ['Yeni başlayanlara uygun', 'Temel duruşlar'] },
+  ];
+};
+
+export const fetchClassDetailsMap = async (): Promise<Record<string, ClassDetails>> => {
+  return {
+    'Hatha Yoga': {
+        description: 'Duruş, nefes ve beden farkındalığını dengeli şekilde çalışmak isteyenler için uygundur.',
+        suitableFor: 'Yeni başlayanlar ve sakin tempoda pratik yapmak isteyenler.',
+        ctas: [{label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567'}, {label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567'}]
+    },
+    'Vinyasa Yoga': {
+        description: 'Nefesle hareketi birleştiren, daha akışkan ve dinamik bir yoga pratiğidir.',
+        suitableFor: 'Daha hareketli bir ders isteyen ve temel yoga deneyimi olan kişiler.',
+        ctas: [{label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567'}, {label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567'}]
+    },
+    'Yin Yoga': {
+        description: 'Daha yavaş, sakin ve gevşeme odaklı bir pratik arayanlar için uygundur.',
+        suitableFor: 'Her seviyeden katılımcı için uygundur.',
+        ctas: [{label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567'}, {label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567'}]
+    },
+    'Başlangıç Yoga': {
+        description: 'Yoga’ya yeni başlayanlar için temel duruşların ve nefes farkındalığının anlatıldığı derstir.',
+        suitableFor: 'Daha önce yoga yapmamış kişiler.',
+        ctas: [{label: 'Bu Ders Bana Uygun mu?', type: 'secondary', link: 'https://wa.me/905551234567'}, {label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567'}]
+    },
+    'Nefes ve Meditasyon': {
+        description: 'Nefes farkındalığı, odaklanma ve zihinsel sakinlik üzerine çalışılır.',
+        suitableFor: 'Sakin bir pratik isteyen herkes.',
+        ctas: [{label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567'}, {label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567'}]
+    }
+  };
 };
 
 export const fetchClasses = async (): Promise<ClassInfo[]> => {
@@ -79,7 +123,7 @@ export const fetchTeachers = async (): Promise<Teacher[]> => {
     {
       id: "1",
       name: "Selen Şenocak",
-      specialty: "Detaylı Çakra Temizliği",
+      specialty: "Vinyasa & Hatha & Aerial",
       image: "https://instagram.fist11-1.fna.fbcdn.net/v/t51.82787-15/625880335_18344065954225315_5651658455366894653_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ig_cache_key=MjY4MTU4MjY1Nzk3OTE3NTEyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY4MHg2ODAuc2RyLkMzIn0%3D&_nc_ohc=CvEo2EXaF18Q7kNvwE5RorB&_nc_oc=AdqxksdwM1zKBDXRN6DE-a183By77lF1lxfgdpgjfzbV2GiwymjrOUy66NWOcef09M8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fist11-1.fna&_nc_gid=_FeBJLcp9AJUCpmD53LBIg&_nc_ss=7a22e&oh=00_Af3cBA5QKRfWxFsrVrTm3wzUE01CwTTWIeNtvQ4-sRgUew&oe=69F6C028",
       socials: {
         instagram: "https://www.instagram.com/selensenocak/",
