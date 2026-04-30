@@ -50,6 +50,12 @@ export interface Teacher {
   };
 }
 
+export interface BlogPostSection {
+  heading?: string;
+  body: string;
+  inlineCta?: { text: string; href: string };
+}
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -57,6 +63,8 @@ export interface BlogPost {
   slug: string;
   image?: string;
   readTime?: string;
+  category?: string;
+  content?: BlogPostSection[];
 }
 
 export interface Membership {
