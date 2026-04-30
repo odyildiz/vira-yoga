@@ -32,25 +32,8 @@ export default async function DersProgramiPage() {
             Ders Programı
           </h1>
           <p className="font-body-lg text-white/90 max-w-2xl mb-8 drop-shadow-sm text-base md:text-lg">
-            Haftalık ders saatlerini inceleyebilir, sana uygun ders için bizi arayabilir
-            veya WhatsApp&apos;tan bilgi alabilirsin.
+            Haftalık ders saatlerini inceleyebilir, sana uygun dersi bulmak için programımıza göz atabilirsin.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <a
-              href="https://wa.me/905551234567"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-center bg-primary text-on-primary font-button text-button px-8 py-3 rounded-full hover:bg-surface-tint transition-all duration-300 shadow-[0_8px_24px_rgba(249,115,22,0.2)]"
-            >
-              WhatsApp&apos;tan Sor
-            </a>
-            <a
-              href="tel:+905551234567"
-              className="inline-block text-center bg-white text-on-background font-button text-button px-8 py-3 rounded-full hover:bg-surface transition-all duration-300"
-            >
-              Bizi Ara
-            </a>
-          </div>
         </div>
       </header>
 

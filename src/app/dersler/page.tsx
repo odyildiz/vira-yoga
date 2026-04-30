@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import DetailedClassCard from "@/components/cards/DetailedClassCard";
 import FAQItem from "@/components/FAQItem";
 import Contact from "@/components/Contact";
+import WhatsAppButton from "@/components/buttons/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Dersler | Vira Yoga",
@@ -118,9 +119,6 @@ export default function DerslerPage() {
               <Link href="/ders-programi" className="inline-block text-center bg-primary text-on-primary font-button text-sm px-8 py-3.5 rounded-full hover:bg-surface-tint transition-all duration-300 shadow-[0_8px_24px_rgba(249,115,22,0.2)]">
                 Ders Programını Gör
               </Link>
-              <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer" className="inline-block text-center bg-white text-on-background font-button text-sm px-8 py-3.5 rounded-full hover:bg-surface transition-all duration-300">
-                WhatsApp’tan Sor
-              </a>
             </div>
           </div>
         </header>
@@ -161,9 +159,11 @@ export default function DerslerPage() {
                   <span>Rahat hareket edebileceğin kıyafetler tercih edebilirsin.</span>
                 </li>
               </ul>
-              <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer" className="inline-block bg-primary text-white font-button text-sm px-6 py-3 rounded-full hover:bg-orange-600 transition-colors shadow-sm">
-                Bu Ders Bana Uygun mu?
-              </a>
+              <WhatsAppButton 
+                phoneNumber="905555555555" 
+                label="Bu Ders Bana Uygun mu?" 
+                variant="primary"
+              />
             </div>
           </div>
         </section>
