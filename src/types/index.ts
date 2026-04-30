@@ -43,10 +43,13 @@ export interface Teacher {
   name: string;
   specialty: string;
   image?: string;
+  bio?: string;
+  classes?: string[];
   socials: {
     instagram?: string;
     twitter?: string;
     facebook?: string;
+    linkedin?: string;
   };
 }
 

@@ -1,28 +1,74 @@
 import { Teacher } from "@/types";
+import Image from "next/image";
 
 interface Props {
   teacher: Teacher;
 }
 
 export default function TeacherCard({ teacher }: Props) {
+  const getInitials = (name: string) => {
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .substring(0, 2)
+      .toUpperCase();
+  };
+
   return (
-    <div className="bg-surface rounded-xl p-margin border border-surface-dim text-center">
-      {teacher.image ? (
-        <img
-          src={teacher.image}
-          alt={teacher.name}
-          className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-        />
-      ) : (
-        <div className="w-24 h-24 rounded-full bg-surface-variant mx-auto mb-4"></div>
+    <div className="bg-surface-container-lowest border border-surface-dim rounded-3xl p-8 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow text-center relative overflow-hidden">
+      {/* Larger image container */}
+      <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-surface-container-high mx-auto mb-6 flex items-center justify-center border-[6px] border-primary/10 overflow-hidden relative shrink-0">
+        {teacher.image ? (
+          <Image
+            src={teacher.image}
+            alt={teacher.name}
+            fill
+            className="object-cover"
+          />
+        ) : (
+          <span className="text-5xl text-primary font-bold font-serif">
+            {getInitials(teacher.name)}
+          </span>
+        )}
+      </div>
+
+      <h3 className="font-h3 text-2xl font-bold mb-1 text-on-background">
+        {teacher.name}
+      </h3>
+      <p className="text-primary font-semibold text-sm mb-5">
+        {teacher.specialty}
+      </p>
+      
+      {teacher.bio && (
+        <p className="text-on-surface-variant text-sm mb-8 flex-grow leading-relaxed">
+          {teacher.bio}
+        </p>
       )}
-      <h3 className="font-h3 text-xl text-on-background">{teacher.name}</h3>
-      <p className="text-on-surface-variant text-sm mt-2">{teacher.specialty}</p>
-      <div className="flex justify-center items-center gap-4 mt-4">
+
+      {teacher.classes && teacher.classes.length > 0 && (
+        <div className="mb-8 text-left bg-surface-container-low p-4 rounded-xl">
+          <h4 className="font-bold text-xs uppercase tracking-wider text-on-surface-variant mb-3">
+            Verdiği Dersler
+          </h4>
+          <ul className="text-sm text-on-background space-y-2 font-medium">
+            {teacher.classes.map((cls, idx) => (
+              <li key={idx} className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>{" "}
+                {cls}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Social Media Buttons */}
+      <div className="flex justify-center gap-4 mt-auto border-t border-surface-dim pt-6">
         {teacher.socials.instagram && (
           <a
             href={teacher.socials.instagram}
-            className="text-on-surface-variant hover:text-primary transition-colors"
+            className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors"
+            aria-label="Instagram"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -33,20 +79,37 @@ export default function TeacherCard({ teacher }: Props) {
             </svg>
           </a>
         )}
+        {teacher.socials.linkedin && (
+          <a
+            href={teacher.socials.linkedin}
+            className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors"
+            aria-label="LinkedIn"
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                fillRule="evenodd"
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </a>
+        )}
         {teacher.socials.twitter && (
           <a
             href={teacher.socials.twitter}
-            className="text-on-surface-variant hover:text-primary transition-colors"
+            className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors"
+            aria-label="X (Twitter)"
           >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
             </svg>
           </a>
         )}
         {teacher.socials.facebook && (
           <a
             href={teacher.socials.facebook}
-            className="text-on-surface-variant hover:text-primary transition-colors"
+            className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors"
+            aria-label="Facebook"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />

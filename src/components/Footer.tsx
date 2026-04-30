@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col space-y-4">
           <Link className="text-on-surface-variant dark:text-stone-400 hover:text-primary transition-colors duration-300" href="#">Hikayemiz</Link>
-          <Link className="text-on-surface-variant dark:text-stone-400 hover:text-primary transition-colors duration-300" href="#">Eğitmenlerimiz</Link>
+          <Link className="text-on-surface-variant dark:text-stone-400 hover:text-primary transition-colors duration-300" href="/egitmenler">Eğitmenlerimiz</Link>
           <Link className="text-on-surface-variant dark:text-stone-400 hover:text-primary transition-colors duration-300" href="#">Sıkça Sorulan Sorular</Link>
           <Link className="text-on-surface-variant dark:text-stone-400 hover:text-primary transition-colors duration-300" href="#">Blog</Link>
         </div>

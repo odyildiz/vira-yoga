@@ -23,7 +23,7 @@ export default function Navbar({ solid = false }: { solid?: boolean }) {
     { name: "Üyelikler", href: isHomePage ? "#memberships" : "/#memberships" },
     { name: "Program", href: "/ders-programi" },
     { name: "Dersler", href: "/dersler" },
-    { name: "Eğitmenler", href: isHomePage ? "#teachers" : "/#teachers" },
+    { name: "Eğitmenler", href: "/egitmenler" },
     { name: "Hakkımızda", href: isHomePage ? "#about" : "/#about" },
   ];
 
