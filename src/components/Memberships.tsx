@@ -1,7 +1,13 @@
 import { fetchMemberships } from "@/lib/api";
 import MembershipCard from "./cards/MembershipCard";
 
-export default async function Memberships() {
+export default async function Memberships({
+  title = "Üyelikler",
+  isMainHeading = false,
+}: {
+  title?: string;
+  isMainHeading?: boolean;
+}) {
   const memberships = await fetchMemberships();
 
   // Splitting them into top 3 and bottom 2 matching the original design
@@ -14,7 +20,11 @@ export default async function Memberships() {
       className="pt-32 md:pt-48 pb-20 px-gutter bg-background max-w-max_width mx-auto"
     >
       <div className="text-center mb-xl">
-        <h2 className="font-h2 text-h2 text-on-background mb-4">Üyelikler</h2>
+        {isMainHeading ? (
+          <h1 className="font-h2 text-h2 text-on-background mb-4">{title}</h1>
+        ) : (
+          <h2 className="font-h2 text-h2 text-on-background mb-4">{title}</h2>
+        )}
         <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
           Tek ders deneyiminden düzenli pratiğe kadar farklı ihtiyaçlara uygun
           paketlerimizi inceleyebilirsin. Paketler hakkında detaylı bilgi almak

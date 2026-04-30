@@ -20,7 +20,7 @@ export default function Navbar({ solid = false }: { solid?: boolean }) {
   }, []);
 
   const navLinks = [
-    { name: "Üyelikler", href: isHomePage ? "#memberships" : "/#memberships" },
+    { name: "Üyelikler", href: "/uyelik-paketleri" },
     { name: "Program", href: "/ders-programi" },
     { name: "Dersler", href: "/dersler" },
     { name: "Eğitmenler", href: "/egitmenler" },
