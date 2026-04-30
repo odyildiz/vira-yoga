@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { WeeklyScheduleItem, ClassDetails } from "@/types";
 
@@ -11,57 +11,46 @@ interface Props {
 
 export default function WeeklySchedule({ schedule, classDetailsMap }: Props) {
   const [currentWeekOffset, setCurrentWeekOffset] = useState(0);
-  const [selectedDate, setSelectedDate] = useState("");
-  const [selectedDayName, setSelectedDayName] = useState("");
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const [filters, setFilters] = useState({
     level: "all",
     type: "all",
     teacher: "all",
   });
-  const [dates, setDates] = useState<{ dateStr: string; dayName: string }[]>([]);
 
   // Modal State
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedClassId, setSelectedClassId] = useState<number | null>(null);
 
-  useEffect(() => {
-    generateDateTabs(currentWeekOffset);
-  }, [currentWeekOffset]);
+  const DAY_NAMES = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
 
-  const generateDateTabs = (offset: number) => {
+  const dates = useMemo(() => {
     const today = new Date();
-    const daysArr = [
-      "Pazar",
-      "Pazartesi",
-      "Salı",
-      "Çarşamba",
-      "Perşembe",
-      "Cuma",
-      "Cumartesi",
-    ];
-
-    const newDates = [];
-    for (let i = 0; i < 7; i++) {
+    return Array.from({ length: 7 }, (_, i) => {
       const d = new Date(today);
-      d.setDate(today.getDate() + i + offset * 7);
-
-      const dayName = daysArr[d.getDay()];
+      d.setDate(today.getDate() + i + currentWeekOffset * 7);
+      const dayName = DAY_NAMES[d.getDay()];
       const dateStr =
         String(d.getDate()).padStart(2, "0") +
         "." +
         String(d.getMonth() + 1).padStart(2, "0") +
         "." +
         d.getFullYear();
+      return { dateStr, dayName };
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentWeekOffset]);
 
-      newDates.push({ dateStr, dayName });
+  // Derive selected date and day name from index
+  const selectedDate = dates[selectedIndex]?.dateStr ?? "";
+  const selectedDayName = dates[selectedIndex]?.dayName ?? "";
 
-      if (i === 0) {
-        setSelectedDate(dateStr);
-        setSelectedDayName(dayName);
-      }
-    }
-    setDates(newDates);
-  };
+  useEffect(() => {
+    document.body.style.overflow = isModalOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isModalOpen]);
 
   const handleFilterChange = (key: string, value: string) => {
     setFilters((prev) => ({ ...prev, [key]: value }));
@@ -85,14 +74,12 @@ export default function WeeklySchedule({ schedule, classDetailsMap }: Props) {
   const openModal = (id: number) => {
     setSelectedClassId(id);
     setIsModalOpen(true);
-    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setTimeout(() => {
       setSelectedClassId(null);
-      document.body.style.overflow = "";
     }, 300);
   };
 
@@ -103,7 +90,7 @@ export default function WeeklySchedule({ schedule, classDetailsMap }: Props) {
 
   return (
     <>
-      <div className="max-w-max_width mx-auto px-gutter py-xl">
+      <div className="max-w-max_width mx-auto px-gutter py-xl pb-28 md:pb-xl">
         {/* Filters Section */}
         <section
           id="ScheduleFilters"
@@ -179,26 +166,22 @@ export default function WeeklySchedule({ schedule, classDetailsMap }: Props) {
           {/* Date Tabs */}
           <div className="flex items-center gap-2 pb-6 border-b border-surface-dim mb-8">
             <button
-              onClick={() => setCurrentWeekOffset((prev) => prev - 1)}
+              onClick={() => { setCurrentWeekOffset((prev) => prev - 1); setSelectedIndex(0); }}
               className="p-2 rounded-full hover:bg-surface-container border border-transparent hover:border-outline transition-colors text-on-surface-variant flex-shrink-0 flex items-center justify-center"
             >
               <span className="material-symbols-outlined">chevron_left</span>
             </button>
-            <div className="flex overflow-x-auto hide-scrollbar gap-3 flex-1 scroll-smooth">
+            <div className="flex overflow-x-auto hide-scrollbar gap-3 flex-1 scroll-smooth min-w-0">
               {dates.map((dateObj, index) => {
-                const isActive = dateObj.dateStr === selectedDate;
+                const isActive = index === selectedIndex;
                 return (
                   <button
                     key={index}
-                    onClick={() => {
-                      setSelectedDate(dateObj.dateStr);
-                      setSelectedDayName(dateObj.dayName);
-                    }}
-                    className={`filter-date-btn whitespace-nowrap flex flex-col items-center justify-center px-4 py-2 md:px-6 md:py-3 border rounded-xl transition-colors duration-200 min-w-[80px] md:min-w-[120px] ${
-                      isActive
+                    onClick={() => setSelectedIndex(index)}
+                    className={`filter-date-btn whitespace-nowrap flex flex-col items-center justify-center px-4 py-2 md:px-6 md:py-3 border rounded-xl transition-colors duration-200 min-w-[80px] md:min-w-[120px] ${isActive
                         ? "active text-white bg-primary border-primary"
                         : "text-on-surface-variant hover:bg-surface-container bg-surface-container-lowest border-outline"
-                    }`}
+                      }`}
                   >
                     <span className="font-label-caps text-[10px] uppercase tracking-wider opacity-80 mb-1">
                       {dateObj.dayName}
@@ -209,7 +192,7 @@ export default function WeeklySchedule({ schedule, classDetailsMap }: Props) {
               })}
             </div>
             <button
-              onClick={() => setCurrentWeekOffset((prev) => prev + 1)}
+              onClick={() => { setCurrentWeekOffset((prev) => prev + 1); setSelectedIndex(0); }}
               className="p-2 rounded-full hover:bg-surface-container border border-transparent hover:border-outline transition-colors text-on-surface-variant flex-shrink-0 flex items-center justify-center"
             >
               <span className="material-symbols-outlined">chevron_right</span>
@@ -396,11 +379,10 @@ export default function WeeklySchedule({ schedule, classDetailsMap }: Props) {
                     key={idx}
                     href={cta.link}
                     target={cta.link.startsWith("http") ? "_blank" : "_self"}
-                    className={`w-full text-center font-button text-sm px-6 py-3 rounded-full transition-colors ${
-                      cta.type === "primary"
+                    className={`w-full text-center font-button text-sm px-6 py-3 rounded-full transition-colors ${cta.type === "primary"
                         ? "bg-primary text-on-primary hover:bg-surface-tint"
                         : "bg-white border border-outline text-on-surface-variant hover:bg-surface"
-                    }`}
+                      }`}
                   >
                     {cta.label}
                   </Link>

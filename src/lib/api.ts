@@ -158,17 +158,67 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
   return [
     {
       id: "1",
-      title: "Şehir Hayatında Topraklanmak",
-      excerpt: "Günlük koşuşturmaca içinde merkezimizi nasıl bulabiliriz?",
-      slug: "sehir-hayatinda-topraklanmak",
-      image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=600&auto=format&fit=crop",
+      title: "İlk Yoga Dersine Nasıl Hazırlanılır?",
+      excerpt: "İlk ders öncesi kıyafet, mat, zamanlama ve dikkat etmen gereken temel noktalar.",
+      slug: "ilk-yoga-dersine-nasil-hazirlanilir",
+      image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2070&auto=format&fit=crop",
+      readTime: "4 dk okuma"
     },
     {
       id: "2",
-      title: "Yin Yoga'nın Derinliklerine İn",
-      excerpt: "Bedenin derin dokularına ulaşmanın yolları ve faydaları.",
-      slug: "yin-yoganin-derinliklerine-in",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop",
+      title: "Yoga İçin Esnek Olmak Gerekir mi?",
+      excerpt: "Yoga’ya başlamak için esnek olman gerekmez. Pratik, bedeni tanımakla başlar.",
+      slug: "yoga-icin-esnek-olmak-gerekir-mi",
+      image: "https://images.unsplash.com/photo-1588286840104-a2123ccb8979?q=80&w=2070&auto=format&fit=crop",
+      readTime: "3 dk okuma"
+    },
+    {
+      id: "3",
+      title: "Hatha Yoga Kimler İçin Uygun?",
+      excerpt: "Hatha Yoga’nın temposunu, seviyesini ve kimler için iyi bir başlangıç olabileceğini anlattık.",
+      slug: "hatha-yoga-kimler-icin-uygun",
+      image: "https://images.unsplash.com/photo-1552196563-55259262490b?q=80&w=1926&auto=format&fit=crop",
+      readTime: "4 dk okuma"
+    },
+    {
+      id: "4",
+      title: "Vinyasa Yoga Nedir?",
+      excerpt: "Nefesle hareketi birleştiren daha akışkan ve dinamik yoga pratiğini tanıyalım.",
+      slug: "vinyasa-yoga-nedir",
+      image: "https://images.unsplash.com/photo-1510804443144-88b90ed0abdb?q=80&w=2070&auto=format&fit=crop",
+      readTime: "4 dk okuma"
+    },
+    {
+      id: "5",
+      title: "Yin Yoga Neden Daha Sakin Bir Pratiktir?",
+      excerpt: "Yin Yoga’nın yavaş temposunu, gevşeme odaklı yapısını ve kimler için uygun olduğunu anlattık.",
+      slug: "yin-yoga-neden-daha-sakin-bir-pratiktir",
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1999&auto=format&fit=crop",
+      readTime: "4 dk okuma"
+    },
+    {
+      id: "6",
+      title: "Nefes Farkındalığı Neden Önemlidir?",
+      excerpt: "Nefesi fark etmek, pratik sırasında bedeni ve zihni daha sakin izlemeye yardımcı olabilir.",
+      slug: "nefes-farkindaligi-neden-onemlidir",
+      image: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=2119&auto=format&fit=crop",
+      readTime: "3 dk okuma"
+    },
+    {
+      id: "7",
+      title: "Meditasyona Başlamak İçin Küçük Bir Rehber",
+      excerpt: "Meditasyona yeni başlayanlar için sade, uygulanabilir ve kısa bir başlangıç rehberi.",
+      slug: "meditasyona-baslamak-icin-kucuk-bir-rehber",
+      image: "https://images.unsplash.com/photo-1536623975707-c4b3b2af565d?q=80&w=2070&auto=format&fit=crop",
+      readTime: "5 dk okuma"
+    },
+    {
+      id: "8",
+      title: "Vira Yoga’da İlk Gün Seni Neler Bekler?",
+      excerpt: "Stüdyoya ilk gelişinde karşılaşacağın süreci ve ders öncesi küçük detayları anlattık.",
+      slug: "vira-yogada-ilk-gun-seni-neler-bekler",
+      image: "https://images.unsplash.com/photo-1545389336-cf090694435e?q=80&w=1964&auto=format&fit=crop",
+      readTime: "4 dk okuma"
     },
   ];
 };

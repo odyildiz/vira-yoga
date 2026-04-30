@@ -1,8 +1,14 @@
+import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WeeklySchedule from "@/components/WeeklySchedule";
 import Contact from "@/components/Contact";
 import { fetchWeeklySchedules, fetchClassDetailsMap } from "@/lib/api";
+
+export const metadata: Metadata = {
+  title: "Ders Programı | Vira Yoga",
+  description: "Vira Yoga haftalık ders saatlerini inceleyin. Hatha, Vinyasa, Yin Yoga ve daha fazlası için uygun derse kolayca ulaşın.",
+};
 
 export default async function DersProgramiPage() {
   const schedule = await fetchWeeklySchedules();
@@ -12,6 +18,7 @@ export default async function DersProgramiPage() {
     <>
       <Navbar />
 
+      <main className="flex-grow">
       {/* Hero Section */}
       <header className="relative w-full h-[350px] md:h-[450px] flex items-center overflow-hidden bg-on-background">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
@@ -20,22 +27,22 @@ export default async function DersProgramiPage() {
           className="absolute inset-0 w-full h-full object-cover"
           alt="Yoga Studio"
         />
-        <div className="relative z-20 px-8 md:px-16 lg:px-24 w-full flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-24">
-          <h1 className="font-h1 text-[36px] md:text-[56px] text-white tracking-widest mb-4 drop-shadow-md">
+        <div className="relative z-20 px-6 md:px-16 lg:px-24 w-full flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-24 max-w-7xl mx-auto">
+          <h1 className="font-h1 text-[30px] md:text-[56px] text-white tracking-widest mb-4 drop-shadow-md">
             Ders Programı
           </h1>
-          <p className="font-body-lg text-white/90 max-w-2xl mb-8 drop-shadow-sm">
+          <p className="font-body-lg text-white/90 max-w-2xl mb-8 drop-shadow-sm text-base md:text-lg">
             Haftalık ders saatlerini inceleyebilir, sana uygun ders için bizi arayabilir
-            veya WhatsApp’tan bilgi alabilirsin.
+            veya WhatsApp&apos;tan bilgi alabilirsin.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <a
               href="https://wa.me/905551234567"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-center bg-primary text-on-primary font-button text-button px-8 py-3 rounded-full hover:bg-surface-tint transition-all duration-300 shadow-[0_8px_24px_rgba(249,115,22,0.2)]"
             >
-              WhatsApp’tan Sor
+              WhatsApp&apos;tan Sor
             </a>
             <a
               href="tel:+905551234567"
@@ -48,24 +55,24 @@ export default async function DersProgramiPage() {
       </header>
 
       {/* Quick Info Strip */}
-      <div className="bg-surface-container-low border-b border-surface-dim py-4 px-gutter">
-        <div className="max-w-max_width mx-auto flex flex-col md:flex-row justify-center md:justify-around items-center gap-4 text-center">
-          <div className="flex items-center text-on-surface-variant space-x-2">
-            <span className="material-symbols-outlined text-primary text-lg">
+      <div className="bg-surface-container-low border-b border-surface-dim py-4 px-6">
+        <div className="max-w-max_width mx-auto flex flex-col sm:flex-row justify-center sm:justify-around items-start sm:items-center gap-3 sm:gap-4">
+          <div className="flex items-center text-on-surface-variant gap-2">
+            <span className="material-symbols-outlined text-primary text-lg shrink-0">
               schedule
             </span>
             <span className="font-body-md text-sm">Ders süresi: 60 dk</span>
           </div>
-          <div className="flex items-center text-on-surface-variant space-x-2">
-            <span className="material-symbols-outlined text-primary text-lg">
+          <div className="flex items-center text-on-surface-variant gap-2">
+            <span className="material-symbols-outlined text-primary text-lg shrink-0">
               door_front
             </span>
             <span className="font-body-md text-sm">
               İlk gelişte 10-15 dk erken gelmeni öneririz
             </span>
           </div>
-          <div className="flex items-center text-on-surface-variant space-x-2">
-            <span className="material-symbols-outlined text-primary text-lg">
+          <div className="flex items-center text-on-surface-variant gap-2">
+            <span className="material-symbols-outlined text-primary text-lg shrink-0">
               groups
             </span>
             <span className="font-body-md text-sm">
@@ -79,39 +86,41 @@ export default async function DersProgramiPage() {
 
       <Contact />
 
+      </main>
+
       <Footer />
 
       {/* Mobile Sticky Contact Bar */}
       <div
         id="StickyContactBar"
-        className="md:hidden fixed bottom-0 w-full bg-white border-t border-surface-dim shadow-[0_-4px_10px_rgba(0,0,0,0.05)] z-40 flex justify-between items-center p-2 px-4 pb-4"
+        className="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-lowest border-t border-surface-dim shadow-[0_-4px_10px_rgba(0,0,0,0.05)] z-50 flex justify-around items-center p-3"
       >
         <a
           href="tel:+905551234567"
-          className="flex flex-col items-center text-on-surface-variant hover:text-primary w-1/3 py-2"
+          className="flex flex-col items-center text-on-surface-variant hover:text-primary transition-colors"
         >
-          <span className="material-symbols-outlined text-xl mb-1">call</span>
-          <span className="font-button text-[10px]">Ara</span>
+          <span className="material-symbols-outlined text-[22px] mb-1">call</span>
+          <span className="text-[10px] font-bold">Ara</span>
         </a>
         <div className="w-px h-8 bg-surface-dim"></div>
         <a
           href="https://wa.me/905551234567"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center text-primary w-1/3 py-2"
+          className="flex flex-col items-center text-primary transition-colors"
         >
-          <span className="material-symbols-outlined text-xl mb-1">chat</span>
-          <span className="font-button text-[10px]">WhatsApp</span>
+          <span className="material-symbols-outlined text-[22px] mb-1">chat</span>
+          <span className="text-[10px] font-bold">WhatsApp</span>
         </a>
         <div className="w-px h-8 bg-surface-dim"></div>
         <a
           href="https://maps.google.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center text-on-surface-variant hover:text-primary w-1/3 py-2"
+          className="flex flex-col items-center text-on-surface-variant hover:text-primary transition-colors"
         >
-          <span className="material-symbols-outlined text-xl mb-1">directions</span>
-          <span className="font-button text-[10px]">Yol Tarifi</span>
+          <span className="material-symbols-outlined text-[22px] mb-1">directions</span>
+          <span className="text-[10px] font-bold">Yol Tarifi</span>
         </a>
       </div>
     </>

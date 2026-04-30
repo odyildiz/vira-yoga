@@ -8,9 +8,8 @@ interface Props {
 export default function ScheduleCard({ schedule }: Props) {
   return (
     <div
-      className={`flex flex-col md:flex-row items-start md:items-stretch bg-surface p-5 rounded-xl border border-surface-dim hover:border-primary/30 transition-colors duration-300 ${
-        schedule.opacity === 60 ? "opacity-60" : ""
-      }`}
+      className={`flex flex-col md:flex-row items-start md:items-stretch bg-surface p-5 rounded-xl border border-surface-dim hover:border-primary/30 transition-colors duration-300 ${schedule.opacity === 60 ? "opacity-60" : ""
+        }`}
     >
       {/* Time Column */}
       <div className="w-full md:w-32 flex-shrink-0 mb-4 md:mb-0 border-b md:border-b-0 md:border-r border-surface-dim pb-4 md:pb-0 md:pr-4 flex flex-row md:flex-col justify-between items-center md:items-start">

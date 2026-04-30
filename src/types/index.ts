@@ -56,6 +56,7 @@ export interface BlogPost {
   excerpt: string;
   slug: string;
   image?: string;
+  readTime?: string;
 }
 
 export interface Membership {
