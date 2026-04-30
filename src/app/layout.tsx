@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import StickyContactBar from "@/components/StickyContactBar";
 
 export const metadata: Metadata = {
   title: "Vira Yoga | Kadıköydeki Eviniz",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Noto+Serif:wght@400&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
         {children}
+        <StickyContactBar />
       </body>
     </html>
   );
