@@ -48,9 +48,12 @@ export default function ScheduleCard({ schedule }: Props) {
 
       {/* Actions Column */}
       <div className="w-full md:w-auto flex flex-row md:flex-col justify-end gap-3 md:pl-4 border-t md:border-t-0 border-surface-dim pt-4 md:pt-0 items-center md:items-end">
-        <button className="flex-1 md:flex-none text-center bg-primary text-on-primary font-button text-sm px-6 py-2 rounded-full hover:bg-surface-tint transition-colors shadow-sm">
+        <Link
+          href="#contact"
+          className="flex-1 md:flex-none text-center bg-primary text-on-primary font-button text-sm px-6 py-2 rounded-full hover:bg-surface-tint transition-colors shadow-sm"
+        >
           Bilgi Al
-        </button>
+        </Link>
         <Link
           href="https://wa.me/905551234567"
           target="_blank"

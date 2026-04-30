@@ -24,7 +24,7 @@ export default function Navbar({ solid = false }: { solid?: boolean }) {
     { name: "Program", href: "/ders-programi" },
     { name: "Dersler", href: "/dersler" },
     { name: "Eğitmenler", href: "/egitmenler" },
-    { name: "Hakkımızda", href: isHomePage ? "#about" : "/#about" },
+    { name: "Blog", href: "/blog" },
   ];
 
   const effectiveIsScrolled = solid || isScrolled;
@@ -91,7 +91,7 @@ export default function Navbar({ solid = false }: { solid?: boolean }) {
           <Link
             href="/"
             id="mobile-logo"
-            className={`font-h3 text-h3 drop-shadow-md transition-colors duration-300 ${
+            className={`text-xl font-serif tracking-widest font-bold drop-shadow-md transition-colors duration-300 ${
               effectiveIsScrolled || isMobileMenuOpen ? "text-primary" : "text-white"
             }`}
             onClick={() => setIsMobileMenuOpen(false)}

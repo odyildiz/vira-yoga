@@ -23,7 +23,7 @@ export default function Hero() {
           GELDİNİZ
         </h1>
         <Link
-          href="#contact"
+          href="/yeni-baslayanlar"
           className="inline-block text-center bg-primary text-on-primary font-button text-button px-8 py-4 rounded-full hover:bg-surface-tint transition-all duration-300 shadow-[0_8px_24px_rgba(249,115,22,0.2)] hover:-translate-y-1"
         >
           Yogaya Yeni Başlayanlar

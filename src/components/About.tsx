@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -9,10 +10,10 @@ export default function About() {
             Şehrin kalbinde, Vira Yoga bir anlık mola sunar. Profesyonel boş alanın gücüne inanıyoruz—gürültüden uzaklaşıp nefesinizle, bedeninizle ve gerçek benliğinizle yeniden bağlantı kurabileceğiniz bir yer.
           </p>
           <div className="pt-md">
-            <button className="text-primary font-button text-button border-b border-primary pb-1 hover:text-surface-tint transition-colors duration-300 flex items-center space-x-2">
+            <Link href="#about" className="text-primary font-button text-button border-b border-primary pb-1 hover:text-surface-tint transition-colors duration-300 flex inline-flex items-center space-x-2">
               <span>Hikayemizi Oku</span>
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
-            </button>
+            </Link>
           </div>
         </div>
         <div className="relative h-[500px] rounded-xl overflow-hidden shadow-[0_20px_40px_-15px_rgba(239,217,180,0.3)]">

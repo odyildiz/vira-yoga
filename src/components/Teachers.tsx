@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { fetchTeachers } from "@/lib/api";
 import TeacherCard from "./cards/TeacherCard";
 
@@ -13,9 +14,17 @@ export default async function Teachers() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-lg">
-        {teachers.map((teacher) => (
+        {teachers.slice(0, 3).map((teacher) => (
           <TeacherCard key={teacher.id} teacher={teacher} />
         ))}
+      </div>
+      <div className="mt-xl text-center">
+        <Link
+          href="/egitmenler"
+          className="inline-block font-button text-button px-8 py-3 border border-outline rounded-full hover:bg-surface-container transition-colors duration-300"
+        >
+          Tüm Eğitmenleri Gör
+        </Link>
       </div>
     </section>
   );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ClassInfo } from "@/types";
 
 interface Props {
@@ -35,9 +36,9 @@ export default function ClassCard({ classInfo }: Props) {
             <span className="material-symbols-outlined text-sm">schedule</span>
             <span className="font-body-md text-sm">{classInfo.duration} Dk</span>
           </div>
-          <button className="text-primary font-button text-button hover:underline">
+          <Link href="/ders-programi" className="text-primary font-button text-button hover:underline">
             Programı İncele
-          </button>
+          </Link>
         </div>
       </div>
     </div>

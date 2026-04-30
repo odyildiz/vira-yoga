@@ -56,14 +56,6 @@ export default async function BlogDetailPage({ params }: Props) {
               </Link>
 
               <div className="flex items-center justify-center gap-3 text-sm text-on-surface-variant mb-4">
-                {post.category && (
-                  <>
-                    <span className="bg-primary-container text-on-primary-container text-xs font-bold px-3 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                    <span className="text-outline-variant">•</span>
-                  </>
-                )}
                 {post.readTime && (
                   <span className="flex items-center gap-1">
                     <span className="material-symbols-outlined text-[16px]">schedule</span>
