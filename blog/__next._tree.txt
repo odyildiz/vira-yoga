@@ -1,0 +1,12 @@
+:HL["/vira-yoga/_next/static/chunks/0z.az51epj~jb.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Noto+Serif:wght@400&display=swap","style"]
+:HL["https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap","style"]
+:HL["https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2070&auto=format&fit=crop","image"]
+:HL["https://images.unsplash.com/photo-1588286840104-a2123ccb8979?q=80&w=2070&auto=format&fit=crop","image"]
+:HL["https://images.unsplash.com/photo-1552196563-55259262490b?q=80&w=1926&auto=format&fit=crop","image"]
+:HL["https://images.unsplash.com/photo-1510804443144-88b90ed0abdb?q=80&w=2070&auto=format&fit=crop","image"]
+:HL["https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1999&auto=format&fit=crop","image"]
+:HL["https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=2119&auto=format&fit=crop","image"]
+:HL["https://images.unsplash.com/photo-1536623975707-c4b3b2af565d?q=80&w=2070&auto=format&fit=crop","image"]
+:HL["https://images.unsplash.com/photo-1545389336-cf090694435e?q=80&w=1964&auto=format&fit=crop","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"JDb6m5bLkHBuxzJbDO310"}
