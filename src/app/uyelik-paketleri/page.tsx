@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import WhatsAppButton from "@/components/buttons/WhatsAppButton";
 import CallButton from "@/components/buttons/CallButton";
+import Contact from "@/components/Contact";
 
 export const metadata: Metadata = {
   title: "Üyelik Paketleri ve Fiyatlar | Vira Yoga",
@@ -17,6 +18,24 @@ export default function UyelikPaketleriPage() {
       <Navbar solid={true} />
       
       <main className="flex-grow pb-24 md:pb-0">
+        <header className="relative w-full h-[350px] md:h-[450px] flex items-center overflow-hidden bg-on-background mt-0">
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1200&auto=format&fit=crop"
+            className="absolute inset-0 w-full h-full object-cover"
+            alt="Yoga Studio"
+          />
+          <div className="relative z-20 px-8 md:px-16 lg:px-24 w-full flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-24 max-w-7xl mx-auto">
+            <h1 className="font-h1 text-[36px] md:text-[56px] text-white tracking-widest mb-4 drop-shadow-md">
+              Üyelik Paketleri
+            </h1>
+            <p className="font-body-lg text-white/90 max-w-2xl mb-8 drop-shadow-sm">
+              Sana uygun üyelik paketini seçerek pratiğine dilediğin gibi yön ver.
+            </p>
+          </div>
+        </header>
+
         {/* 1. PACKAGE CARDS SECTION */}
       <Memberships title="Pratiğine Uygun Paketi Seç" isMainHeading={true} />
 
@@ -260,41 +279,7 @@ export default function UyelikPaketleriPage() {
       </section>
 
       {/* 5. FINAL CONTACT SECTION */}
-      <section id="contact" className="py-24 px-8 md:px-16 bg-surface">
-        <div className="max-w-4xl mx-auto text-center bg-secondary-container p-12 rounded-3xl border border-surface-variant shadow-sm">
-          <h2 className="font-h2 text-3xl md:text-4xl text-on-background mb-4">İlk adımı birlikte atalım</h2>
-          <p className="text-on-surface-variant text-lg max-w-2xl mx-auto mb-8">
-            Yoga’ya nereden başlayacağını bilmiyorsan yalnız değilsin. Seni tanımak, sorularını cevaplamak ve sana uygun ilk dersi birlikte seçmek için buradayız.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <CallButton 
-              phoneNumber="+905555555555" 
-              label="Bizi Ara" 
-              variant="primary"
-            />
-            <WhatsAppButton 
-              phoneNumber="905555555555" 
-              label="WhatsApp'tan Yaz" 
-              variant="outline"
-            />
-            <Link
-              href="https://maps.google.com/?q=Vira+Yoga"
-              target="_blank"
-              className="bg-surface-container-lowest text-on-surface border border-outline-variant font-button px-8 py-4 rounded-full hover:bg-surface-container transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              <span className="material-symbols-outlined text-[20px]">directions</span> Yol Tarifi Al
-            </Link>
-          </div>
-          
-          <p className="text-on-surface-variant text-sm mb-4">
-            Dilersen önce ders programını inceleyebilir, ardından bize ulaşabilirsin.
-          </p>
-          <Link href="/ders-programi" className="text-primary font-bold hover:underline">
-            Ders Programını Gör
-          </Link>
-        </div>
-      </section>
+      <Contact title="İlk adımı birlikte atalım" description="Yoga’ya nereden başlayacağını bilmiyorsan yalnız değilsin. Seni tanımak, sorularını cevaplamak ve sana uygun ilk dersi birlikte seçmek için buradayız." />
       </main>
 
       <Footer />

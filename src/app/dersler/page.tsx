@@ -18,7 +18,7 @@ export default function DerslerPage() {
     {
       title: "Başlangıç Yoga",
       description: "Yoga’ya yeni başlayanlar için temel duruşların ve nefes farkındalığının anlatıldığı derstir.",
-      level: "Yeni Başlayan",
+      level: "Başlangıç",
       tempo: "Sakin",
       duration: "60 dk",
       actionText: "Programı Gör",
@@ -179,7 +179,7 @@ export default function DerslerPage() {
         </section>
 
         {/* 5. CONTACT SECTION */}
-        <Contact />
+        <Contact title="Sana En Uygun Dersi Birlikte Seçelim" description="Ders türleri hakkında detaylı bilgi almak veya seviyene uygun dersi belirlemek için bize ulaş." />
       </main>
 
       <Footer />

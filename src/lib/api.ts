@@ -44,12 +44,12 @@ export const fetchWeeklySchedules = async (): Promise<WeeklyScheduleItem[]> => {
     { id: 1, day: 'Pazartesi', start: '09:00', end: '10:00', name: 'Hatha Yoga', teacher: 'Ayşe', level: 'Her Seviye', type: 'Hatha', tags: ['Yeni başlayanlara uygun', 'Dengeli tempo'] },
     { id: 2, day: 'Pazartesi', start: '19:00', end: '20:00', name: 'Vinyasa Yoga', teacher: 'Mert', level: 'Orta Seviye', type: 'Vinyasa', tags: ['Dinamik', 'Akış odaklı'] },
     { id: 3, day: 'Salı', start: '10:00', end: '11:00', name: 'Yin Yoga', teacher: 'Zeynep', level: 'Her Seviye', type: 'Yin', tags: ['Sakin', 'Gevşeme odaklı'] },
-    { id: 4, day: 'Salı', start: '18:30', end: '19:30', name: 'Başlangıç Yoga', teacher: 'Ayşe', level: 'Yeni Başlayan', type: 'Hatha', tags: ['Yeni başlayanlara uygun', 'Temel duruşlar'] },
+    { id: 4, day: 'Salı', start: '18:30', end: '19:30', name: 'Başlangıç Yoga', teacher: 'Ayşe', level: 'Başlangıç', type: 'Hatha', tags: ['Yeni başlayanlara uygun', 'Temel duruşlar'] },
     { id: 5, day: 'Çarşamba', start: '09:00', end: '10:00', name: 'Nefes ve Meditasyon', teacher: 'Zeynep', level: 'Her Seviye', type: 'Nefes', tags: ['Nefes odaklı', 'Sakin'] },
     { id: 6, day: 'Çarşamba', start: '19:00', end: '20:00', name: 'Hatha Yoga', teacher: 'Ayşe', level: 'Her Seviye', type: 'Hatha', tags: ['Yeni başlayanlara uygun', 'Dengeli tempo'] },
     { id: 7, day: 'Perşembe', start: '18:30', end: '19:30', name: 'Vinyasa Yoga', teacher: 'Mert', level: 'Orta Seviye', type: 'Vinyasa', tags: ['Dinamik', 'Akış odaklı'] },
     { id: 8, day: 'Cuma', start: '10:00', end: '11:00', name: 'Yin Yoga', teacher: 'Zeynep', level: 'Her Seviye', type: 'Yin', tags: ['Sakin', 'Gevşeme odaklı'] },
-    { id: 9, day: 'Cumartesi', start: '11:00', end: '12:00', name: 'Başlangıç Yoga', teacher: 'Ayşe', level: 'Yeni Başlayan', type: 'Hatha', tags: ['Yeni başlayanlara uygun', 'Temel duruşlar'] },
+    { id: 9, day: 'Cumartesi', start: '11:00', end: '12:00', name: 'Başlangıç Yoga', teacher: 'Ayşe', level: 'Başlangıç', type: 'Hatha', tags: ['Yeni başlayanlara uygun', 'Temel duruşlar'] },
   ];
 };
 

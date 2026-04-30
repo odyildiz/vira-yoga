@@ -2,6 +2,7 @@ import { fetchBlogPosts } from "@/lib/api";
 import BlogCard from "@/components/cards/BlogCard";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 
 export const metadata = {
   title: "Blog | Vira Yoga",
@@ -15,13 +16,25 @@ export default async function BlogPage() {
     <>
       <Navbar solid={true} />
       <main className="flex-grow pb-24 md:pb-0">
-        <section id="ArticleGrid" className="py-24 md:py-36 px-gutter max-w-max_width mx-auto min-h-[70vh]">
-          <div className="mb-xl text-center md:text-left">
-            <h1 className="font-h1 text-h1 text-on-background mb-4">Blog</h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        <header className="relative w-full h-[350px] md:h-[450px] flex items-center overflow-hidden bg-on-background mt-0">
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=1200&auto=format&fit=crop"
+            className="absolute inset-0 w-full h-full object-cover"
+            alt="Yoga Studio"
+          />
+          <div className="relative z-20 px-8 md:px-16 lg:px-24 w-full flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-24 max-w-7xl mx-auto">
+            <h1 className="font-h1 text-[36px] md:text-[56px] text-white tracking-widest mb-4 drop-shadow-md">
+              Blog
+            </h1>
+            <p className="font-body-lg text-white/90 max-w-2xl mb-8 drop-shadow-sm">
               Yoga, nefes, meditasyon ve stüdyo yaşamına dair yazılar.
             </p>
           </div>
+        </header>
+
+        <section id="ArticleGrid" className="py-24 px-gutter max-w-max_width mx-auto min-h-[70vh]">
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg" id="article-list">
             {posts.map((post) => (
@@ -29,6 +42,8 @@ export default async function BlogPage() {
             ))}
           </div>
         </section>
+        
+        <Contact title="Bizimle İletişime Geç" description="Yazılarımız, derslerimiz veya stüdyomuz hakkında bilgi almak için buradayız." />
       </main>
       <Footer />
     </>

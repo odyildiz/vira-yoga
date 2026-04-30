@@ -28,17 +28,6 @@ export default function DetailedClassCard({
       </div>
       <div className="flex-grow mb-6">
         <p className="text-sm mb-4 leading-relaxed">{description}</p>
-        <div className="text-xs text-on-surface-variant flex flex-col gap-1.5">
-          <p>
-            <strong>Seviye:</strong> {level}
-          </p>
-          <p>
-            <strong>Tempo:</strong> {tempo}
-          </p>
-          <p>
-            <strong>Süre:</strong> {duration}
-          </p>
-        </div>
       </div>
       <div className="flex flex-col gap-3 mt-auto">
         <Link

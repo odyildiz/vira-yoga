@@ -39,27 +39,22 @@ export default function ScheduleCard({ schedule }: Props) {
           <span className="material-symbols-outlined text-[16px]">person</span>{" "}
           Eğitmen: {schedule.instructor}
         </p>
-        <div className="flex flex-wrap">
-          <span className="inline-block bg-surface-dim text-on-surface-variant font-label-caps text-[10px] px-2 py-1 rounded-full mr-2 mb-2">
-            {schedule.studio}
-          </span>
-        </div>
       </div>
 
       {/* Actions Column */}
       <div className="w-full md:w-auto flex flex-row md:flex-col justify-end gap-3 md:pl-4 border-t md:border-t-0 border-surface-dim pt-4 md:pt-0 items-center md:items-end">
         <Link
-          href="#contact"
+          href="tel:+905551234567"
           className="flex-1 md:flex-none text-center bg-primary text-on-primary font-button text-sm px-6 py-2 rounded-full hover:bg-surface-tint transition-colors shadow-sm"
         >
-          Bilgi Al
+          Bizi Ara
         </Link>
         <Link
-          href="https://wa.me/905551234567"
+          href={`https://wa.me/905551234567?text=${encodeURIComponent(`Merhaba, ${schedule.title} dersi hakkında bilgi almak istiyorum.`)}`}
           target="_blank"
-          className="flex-1 md:flex-none text-center bg-white border border-outline text-on-surface-variant font-button text-sm px-6 py-2 rounded-full hover:bg-surface transition-colors flex items-center justify-center gap-1"
+          className="flex-1 md:flex-none text-center bg-white border border-[#25D366] text-[#25D366] font-button text-sm px-6 py-2 rounded-full hover:bg-[#25D366]/5 transition-colors flex items-center justify-center gap-1"
         >
-          WhatsApp
+          WhatsApp'tan Yaz
         </Link>
       </div>
     </div>

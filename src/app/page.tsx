@@ -20,7 +20,7 @@ export default function Home() {
       <Blog />
       <Memberships />
       <About />
-      <Contact />
+      <Contact title="Bizimle İletişime Geçin" description="Sorularınız, ders paketleri veya stüdyomuz hakkında detaylı bilgi almak için buradayız." />
       <Footer />
     </>
   );

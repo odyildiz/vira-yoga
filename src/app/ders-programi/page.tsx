@@ -67,7 +67,7 @@ export default async function DersProgramiPage() {
 
       <WeeklySchedule schedule={schedule} classDetailsMap={classDetailsMap} />
 
-      <Contact />
+      <Contact title="Programla İlgili Bilgi Al" description="Ders saatleri, kontenjan durumu veya katılmak istediğin ders hakkında bize yazabilirsin." />
 
       </main>
 

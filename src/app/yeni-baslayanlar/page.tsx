@@ -222,26 +222,19 @@ export default function YeniBaslayanlarPage() {
             İlk dersini seçerken tek başına karar vermek zorunda değilsin. Yine de başlangıç için sana fikir verebilecek bazı ders türleri şunlar olabilir:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12 max-w-4xl mx-auto">
             <div className="bg-surface-container-low p-8 rounded-2xl border border-surface-variant">
-              <span className="inline-block bg-primary-container text-on-primary-container text-xs font-bold px-3 py-1 rounded-full mb-4">Sakin tempo</span>
-              <h3 className="font-h3 text-xl text-on-background mb-3">Hatha Yoga</h3>
+              <span className="inline-block bg-primary-container text-on-primary-container text-xs font-bold px-3 py-1 rounded-full mb-4">Temel Adımlar</span>
+              <h3 className="font-h3 text-xl text-on-background mb-3">Başlangıç Dersleri</h3>
               <p className="text-on-surface-variant text-sm">
-                Daha sakin tempolu, duruşları ve nefesi fark etmeye yardımcı olan bir pratik arıyorsan iyi bir başlangıç olabilir.
+                Yoga'ya yeni başlayanlar için temel duruşların ve nefes farkındalığının anlatıldığı sakin tempolu pratiklerdir.
               </p>
             </div>
             <div className="bg-surface-container-low p-8 rounded-2xl border border-surface-variant">
-              <span className="inline-block bg-primary-container text-on-primary-container text-xs font-bold px-3 py-1 rounded-full mb-4">Yavaş ve sakin</span>
-              <h3 className="font-h3 text-xl text-on-background mb-3">Yin Yoga</h3>
+              <span className="inline-block bg-primary-container text-on-primary-container text-xs font-bold px-3 py-1 rounded-full mb-4">Ortak Pratik</span>
+              <h3 className="font-h3 text-xl text-on-background mb-3">Her Seviye Dersler</h3>
               <p className="text-on-surface-variant text-sm">
-                Daha yavaş, gevşeme odaklı ve içe dönük bir deneyim arıyorsan tercih edilebilir.
-              </p>
-            </div>
-            <div className="bg-surface-container-low p-8 rounded-2xl border border-surface-variant">
-              <span className="inline-block bg-primary-container text-on-primary-container text-xs font-bold px-3 py-1 rounded-full mb-4">Farkındalık odaklı</span>
-              <h3 className="font-h3 text-xl text-on-background mb-3">Nefes ve Meditasyon</h3>
-              <p className="text-on-surface-variant text-sm">
-                Bedenden çok zihinsel sakinlik, nefes farkındalığı ve odaklanma arıyorsan iyi bir başlangıç olabilir.
+                Daha önce deneyimi olmayanların da katılabileceği, eğitmenin alternatif seçenekler sunduğu kapsayıcı pratiklerdir.
               </p>
             </div>
           </div>
@@ -331,7 +324,7 @@ export default function YeniBaslayanlarPage() {
       </section>
 
       {/* 8. CONTACT SECTION */}
-      <Contact />
+      <Contact title="Aklına Takılan Bir Şey mi Var?" description="Yoga’ya başlangıç süreciyle ilgili soruların için bizimle her zaman iletişime geçebilirsin." />
 
       <Footer />
 

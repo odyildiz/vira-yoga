@@ -48,16 +48,25 @@ export default function MembershipCard({ membership }: Props) {
           </li>
         ))}
       </ul>
-      <Link
-        href="#contact"
-        className={`w-full text-center font-button text-button px-6 py-3 rounded-full transition-colors duration-300 block ${
-          isHighlighted
-            ? "bg-primary text-on-primary hover:bg-surface-tint"
-            : "border border-primary text-primary hover:bg-primary/5"
-        }`}
-      >
-        {membership.buttonText}
-      </Link>
+      <div className="flex flex-col gap-3 w-full mt-auto">
+        <Link
+          href="tel:+905551234567"
+          className={`w-full text-center font-button text-button px-6 py-3 rounded-full transition-colors duration-300 block ${
+            isHighlighted
+              ? "bg-primary text-on-primary hover:bg-surface-tint"
+              : "border border-primary text-primary hover:bg-primary/5"
+          }`}
+        >
+          Bizi Ara
+        </Link>
+        <Link
+          href={`https://wa.me/905551234567?text=${encodeURIComponent(`Merhaba, ${membership.title} paketiniz hakkında bilgi almak istiyorum.`)}`}
+          target="_blank"
+          className="w-full text-center font-button text-button px-6 py-3 rounded-full border border-[#25D366] text-[#25D366] hover:bg-[#25D366]/5 transition-colors duration-300 flex items-center justify-center gap-1"
+        >
+          WhatsApp'tan Yaz
+        </Link>
+      </div>
     </div>
   );
 }

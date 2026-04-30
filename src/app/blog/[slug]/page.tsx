@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import WhatsAppButton from "@/components/buttons/WhatsAppButton";
 import CallButton from "@/components/buttons/CallButton";
+import Contact from "@/components/Contact";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -189,32 +190,7 @@ export default async function BlogDetailPage({ params }: Props) {
         </section>
 
         {/* ── Final CTA Section ────────────────────────────────────── */}
-        <section className="bg-surface border-t border-surface-dim py-16 px-6 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-h2 text-2xl md:text-3xl text-on-background mb-3">
-              Vira Yoga&apos;yı Yakından Tanı
-            </h2>
-            <p className="text-on-surface-variant text-base mb-8">
-              Ders türlerini, haftalık programı ve üyelik paketlerini inceleyebilirsin.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/dersler"
-                id="blog-final-cta-dersler"
-                className="inline-flex items-center bg-surface text-on-background border border-outline-variant font-button px-6 py-3 rounded-full hover:bg-surface-container transition-colors text-sm"
-              >
-                Dersleri İncele
-              </Link>
-              <Link
-                href="/ders-programi"
-                id="blog-final-cta-program"
-                className="inline-flex items-center bg-surface text-on-background border border-outline-variant font-button px-6 py-3 rounded-full hover:bg-surface-container transition-colors text-sm"
-              >
-                Ders Programını Gör
-              </Link>
-            </div>
-          </div>
-        </section>
+        <Contact title="Vira Yoga'yı Yakından Tanı" description="Derslerimiz, programımız veya sormak istediklerin için bizimle iletişime geçebilirsin." />
 
         <Footer />
       </main>

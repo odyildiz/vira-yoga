@@ -46,21 +46,7 @@ export default function TeacherCard({ teacher }: Props) {
         </p>
       )}
 
-      {teacher.classes && teacher.classes.length > 0 && (
-        <div className="mb-8 text-left bg-surface-container-low p-4 rounded-xl">
-          <h4 className="font-bold text-xs uppercase tracking-wider text-on-surface-variant mb-3">
-            Verdiği Dersler
-          </h4>
-          <ul className="text-sm text-on-background space-y-2 font-medium">
-            {teacher.classes.map((cls, idx) => (
-              <li key={idx} className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>{" "}
-                {cls}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+
 
       {/* Social Media Buttons */}
       <div className="flex justify-center gap-4 mt-auto border-t border-surface-dim pt-6">

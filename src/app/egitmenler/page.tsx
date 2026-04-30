@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TeacherCard from "@/components/cards/TeacherCard";
 import FAQItem from "@/components/FAQItem";
+import Contact from "@/components/Contact";
 import { fetchTeachers } from "@/lib/api";
 
 export const metadata: Metadata = {
@@ -127,6 +128,8 @@ export default async function EgitmenlerPage() {
             ))}
           </div>
         </section>
+
+        <Contact title="Eğitmenlerle İlgili Soruların Mı Var?" description="Hangi eğitmenin dersine katılacağından emin değilsen bize ulaşabilirsin." />
       </main>
 
       <Footer />

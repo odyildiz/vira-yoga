@@ -109,7 +109,7 @@ export default function WeeklySchedule({ schedule, classDetailsMap }: Props) {
                   className="w-full bg-surface-container-lowest border border-outline text-on-background rounded-lg px-4 py-2 font-body-md text-sm focus:ring-primary focus:border-primary"
                 >
                   <option value="all">Tüm Seviyeler</option>
-                  <option value="Yeni Başlayan">Yeni Başlayan</option>
+                  <option value="Başlangıç">Başlangıç</option>
                   <option value="Her Seviye">Her Seviye</option>
                   <option value="Orta Seviye">Orta Seviye</option>
                 </select>
@@ -265,32 +265,23 @@ export default function WeeklySchedule({ schedule, classDetailsMap }: Props) {
                           </span>{" "}
                           Eğitmen: {item.teacher}
                         </p>
-                        <div className="flex flex-wrap">
-                          {item.tags.slice(0, 2).map((tag, idx) => (
-                            <span
-                              key={idx}
-                              className="inline-block bg-surface-dim text-on-surface-variant font-label-caps text-[10px] px-2 py-1 rounded-full mr-2 mb-2"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
+
                       </div>
 
                       {/* Actions Column */}
                       <div className="w-full md:w-auto flex flex-row md:flex-col justify-end gap-3 md:pl-4 border-t md:border-t-0 border-surface-dim pt-4 md:pt-0 items-center md:items-end">
-                        <button
-                          onClick={() => openModal(item.id)}
+                        <Link
+                          href="tel:+905551234567"
                           className="flex-1 md:flex-none text-center bg-primary text-on-primary font-button text-sm px-6 py-2 rounded-full hover:bg-surface-tint transition-colors shadow-sm"
                         >
-                          Bilgi Al
-                        </button>
+                          Bizi Ara
+                        </Link>
                         <Link
-                          href="https://wa.me/905551234567"
+                          href={`https://wa.me/905551234567?text=${encodeURIComponent(`Merhaba, ${item.name} dersi hakkında bilgi almak istiyorum.`)}`}
                           target="_blank"
-                          className="flex-1 md:flex-none text-center bg-white border border-outline text-on-surface-variant font-button text-sm px-6 py-2 rounded-full hover:bg-surface transition-colors flex items-center justify-center gap-1"
+                          className="flex-1 md:flex-none text-center bg-white border border-[#25D366] text-[#25D366] font-button text-sm px-6 py-2 rounded-full hover:bg-[#25D366]/5 transition-colors flex items-center justify-center gap-1"
                         >
-                          WhatsApp
+                          WhatsApp'tan Yaz
                         </Link>
                       </div>
                     </div>

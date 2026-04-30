@@ -31,11 +31,7 @@ export default function ClassCard({ classInfo }: Props) {
             {classInfo.description}
           </p>
         </div>
-        <div className="flex items-center justify-between mt-6 pt-6 border-t border-surface-dim">
-          <div className="flex items-center space-x-2 text-on-surface-variant">
-            <span className="material-symbols-outlined text-sm">schedule</span>
-            <span className="font-body-md text-sm">{classInfo.duration} Dk</span>
-          </div>
+        <div className="flex justify-end mt-6 pt-6 border-t border-surface-dim">
           <Link href="/ders-programi" className="text-primary font-button text-button hover:underline">
             Programı İncele
           </Link>
