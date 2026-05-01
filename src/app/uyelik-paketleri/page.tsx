@@ -1,10 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Memberships from "@/components/Memberships";
-import Link from "next/link";
 import { Metadata } from "next";
-import WhatsAppButton from "@/components/buttons/WhatsAppButton";
-import CallButton from "@/components/buttons/CallButton";
 import Contact from "@/components/Contact";
 
 export const metadata: Metadata = {
@@ -37,7 +34,7 @@ export default function UyelikPaketleriPage() {
         </header>
 
         {/* 1. PACKAGE CARDS SECTION */}
-      <Memberships title="Pratiğine Uygun Paketi Seç" isMainHeading={true} />
+        <Memberships hideHeader={true} />
 
       {/* 2. MEMBERSHIP TERMS SECTION */}
       <section className="py-20 px-8 md:px-16 bg-surface-container-low">

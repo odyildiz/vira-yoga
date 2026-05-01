@@ -62,12 +62,7 @@ export default async function EgitmenlerPage() {
         </header>
 
         {/* 2. Instructor Grid */}
-        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-20">
-          <div className="mb-12 text-center md:text-left">
-            <h2 className="font-h2 text-3xl mb-2 text-on-background">Eğitmenlerimiz</h2>
-            <p className="text-on-surface-variant">Ders tarzlarını ve uzmanlık alanlarını inceleyebilirsin.</p>
-          </div>
-
+        <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 pt-12 pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teachers.map((teacher) => (
               <TeacherCard key={teacher.id} teacher={teacher} />

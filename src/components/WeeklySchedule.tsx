@@ -240,28 +240,25 @@ function ScheduleContent({ schedule, classDetailsMap }: Props) {
 
         {/* Weekly Schedule Section */}
         <section id="WeeklySchedule">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div>
-              <h2 className="font-h2 text-h2 text-on-background">Ders Programı</h2>
-              <p className="font-body-md text-on-surface-variant mt-2 text-sm">
-                Katılmak istediğin ders için önceden bilgi almanı öneririz.
-              </p>
-            </div>
-            
-            {/* View Mode Toggle */}
-            <div className="flex bg-surface-container-low rounded-lg p-1 border border-surface-dim self-start md:self-auto">
-              <button
-                onClick={() => setViewMode("daily")}
-                className={`px-4 py-2 rounded-md font-button text-sm transition-colors ${viewMode === "daily" ? "bg-primary text-white shadow-sm" : "text-on-surface-variant hover:bg-surface-container"}`}
-              >
-                Günlük
-              </button>
-              <button
-                onClick={() => setViewMode("monthly")}
-                className={`px-4 py-2 rounded-md font-button text-sm transition-colors ${viewMode === "monthly" ? "bg-primary text-white shadow-sm" : "text-on-surface-variant hover:bg-surface-container"}`}
-              >
-                Aylık
-              </button>
+          <div className="mb-6">
+            <div className="flex flex-row items-center justify-between gap-4">
+              <h2 className="font-h2 text-2xl md:text-h2 text-on-background">Ders Programı</h2>
+              
+              {/* View Mode Toggle */}
+              <div className="flex bg-surface-container-low rounded-lg p-1 border border-surface-dim shrink-0">
+                <button
+                  onClick={() => setViewMode("daily")}
+                  className={`px-3 md:px-4 py-1.5 md:py-2 rounded-md font-button text-xs md:text-sm transition-colors ${viewMode === "daily" ? "bg-primary text-white shadow-sm" : "text-on-surface-variant hover:bg-surface-container"}`}
+                >
+                  Günlük
+                </button>
+                <button
+                  onClick={() => setViewMode("monthly")}
+                  className={`px-3 md:px-4 py-1.5 md:py-2 rounded-md font-button text-xs md:text-sm transition-colors ${viewMode === "monthly" ? "bg-primary text-white shadow-sm" : "text-on-surface-variant hover:bg-surface-container"}`}
+                >
+                  Aylık
+                </button>
+              </div>
             </div>
           </div>
 

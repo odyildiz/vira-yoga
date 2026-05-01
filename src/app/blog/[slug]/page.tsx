@@ -48,20 +48,20 @@ export default async function BlogDetailPage({ params }: Props) {
 
             {/* ① Header */}
             <header className="mb-10 text-center">
-              <Link
-                href="/blog"
-                className="inline-flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors text-sm mb-8"
-              >
-                <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-                Tüm Yazılara Dön
-              </Link>
+              <div className="flex items-center justify-between mb-8">
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors text-sm"
+                >
+                  <span className="material-symbols-outlined text-[18px]">arrow_back</span>
+                  Tüm Yazılara Dön
+                </Link>
 
-              <div className="flex items-center justify-center gap-3 text-sm text-on-surface-variant mb-4">
                 {post.readTime && (
-                  <span className="flex items-center gap-1">
+                  <div className="flex items-center gap-1 text-sm text-on-surface-variant">
                     <span className="material-symbols-outlined text-[16px]">schedule</span>
                     {post.readTime}
-                  </span>
+                  </div>
                 )}
               </div>
 

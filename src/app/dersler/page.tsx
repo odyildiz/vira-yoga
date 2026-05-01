@@ -130,11 +130,6 @@ export default function DerslerPage() {
 
         {/* 2. Class Types Grid */}
         <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mt-12 mb-20">
-          <div className="mb-8">
-            <h2 className="font-h2 text-3xl mb-2">Ders Türleri</h2>
-            <p className="text-on-surface-variant">Sana uygun dersleri seviye, tempo ve ihtiyacına göre inceleyebilirsin.</p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {classes.map((cls, idx) => (
               <DetailedClassCard key={idx} {...cls} />

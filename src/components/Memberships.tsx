@@ -4,9 +4,11 @@ import MembershipCard from "./cards/MembershipCard";
 export default async function Memberships({
   title = "Üyelikler",
   isMainHeading = false,
+  hideHeader = false,
 }: {
   title?: string;
   isMainHeading?: boolean;
+  hideHeader?: boolean;
 }) {
   const memberships = await fetchMemberships();
 
@@ -17,21 +19,23 @@ export default async function Memberships({
   return (
     <section
       id="memberships"
-      className="pt-32 md:pt-48 pb-20 px-gutter bg-background max-w-max_width mx-auto"
+      className={`${hideHeader ? "pt-12" : "pt-32 md:pt-48"} pb-20 px-gutter bg-background max-w-max_width mx-auto`}
     >
-      <div className="text-center mb-xl">
-        {isMainHeading ? (
-          <h1 className="font-h2 text-h2 text-on-background mb-4">{title}</h1>
-        ) : (
-          <h2 className="font-h2 text-h2 text-on-background mb-4">{title}</h2>
-        )}
-        <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-          Tek ders deneyiminden düzenli pratiğe kadar farklı ihtiyaçlara uygun
-          paketlerimizi inceleyebilirsin. Paketler hakkında detaylı bilgi almak
-          veya sana en uygun seçeneği belirlemek için bizimle iletişime
-          geçebilirsin.
-        </p>
-      </div>
+      {!hideHeader && (
+        <div className="text-center mb-xl">
+          {isMainHeading ? (
+            <h1 className="font-h2 text-h2 text-on-background mb-4">{title}</h1>
+          ) : (
+            <h2 className="font-h2 text-h2 text-on-background mb-4">{title}</h2>
+          )}
+          <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+            Tek ders deneyiminden düzenli pratiğe kadar farklı ihtiyaçlara uygun
+            paketlerimizi inceleyebilirsin. Paketler hakkında detaylı bilgi almak
+            veya sana en uygun seçeneği belirlemek için bizimle iletişime
+            geçebilirsin.
+          </p>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-lg justify-center items-center">
         {topMemberships.map((membership) => (

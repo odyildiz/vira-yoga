@@ -34,7 +34,7 @@ export default async function BlogPage() {
           </div>
         </header>
 
-        <section id="ArticleGrid" className="py-24 px-gutter max-w-max_width mx-auto min-h-[70vh]">
+        <section id="ArticleGrid" className="pt-12 pb-24 px-gutter max-w-max_width mx-auto min-h-[70vh]">
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg" id="article-list">
             {posts.map((post) => (

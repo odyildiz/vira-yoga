@@ -20,57 +20,29 @@ export default async function DersProgramiPage() {
       <Navbar />
 
       <main className="flex-grow">
-      {/* Hero Section */}
-      <header className="relative w-full h-[350px] md:h-[450px] flex items-center overflow-hidden bg-on-background">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <img
-          src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?q=80&w=1200&auto=format&fit=crop"
-          className="absolute inset-0 w-full h-full object-cover"
-          alt="Yoga Studio"
-        />
-        <div className="relative z-20 px-6 md:px-16 lg:px-24 w-full flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-24 max-w-7xl mx-auto">
-          <h1 className="font-h1 text-[30px] md:text-[56px] text-white tracking-widest mb-4 drop-shadow-md">
-            Ders Programı
-          </h1>
-          <p className="font-body-lg text-white/90 max-w-2xl mb-8 drop-shadow-sm text-base md:text-lg">
-            Haftalık ders saatlerini inceleyebilir, sana uygun dersi bulmak için programımıza göz atabilirsin.
-          </p>
-        </div>
-      </header>
-
-      {/* Quick Info Strip */}
-      <div className="bg-surface-container-low border-b border-surface-dim py-4 px-6">
-        <div className="max-w-max_width mx-auto flex flex-col sm:flex-row justify-center sm:justify-around items-start sm:items-center gap-3 sm:gap-4">
-          <div className="flex items-center text-on-surface-variant gap-2">
-            <span className="material-symbols-outlined text-primary text-lg shrink-0">
-              schedule
-            </span>
-            <span className="font-body-md text-sm">Ders süresi: 60 dk</span>
+        {/* Hero Section */}
+        <header className="relative w-full h-[350px] md:h-[450px] flex items-center overflow-hidden bg-on-background">
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
+          <img
+            src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?q=80&w=1200&auto=format&fit=crop"
+            className="absolute inset-0 w-full h-full object-cover"
+            alt="Yoga Studio"
+          />
+          <div className="relative z-20 px-6 md:px-16 lg:px-24 w-full flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-24 max-w-7xl mx-auto">
+            <h1 className="font-h1 text-[30px] md:text-[56px] text-white tracking-widest mb-4 drop-shadow-md">
+              Ders Programı
+            </h1>
+            <p className="font-body-lg text-white/90 max-w-2xl mb-8 drop-shadow-sm text-base md:text-lg">
+              Haftalık ders saatlerini inceleyebilir, sana uygun dersi bulmak için programımıza göz atabilirsin.
+            </p>
           </div>
-          <div className="flex items-center text-on-surface-variant gap-2">
-            <span className="material-symbols-outlined text-primary text-lg shrink-0">
-              door_front
-            </span>
-            <span className="font-body-md text-sm">
-              İlk gelişte 10-15 dk erken gelmeni öneririz
-            </span>
-          </div>
-          <div className="flex items-center text-on-surface-variant gap-2">
-            <span className="material-symbols-outlined text-primary text-lg shrink-0">
-              groups
-            </span>
-            <span className="font-body-md text-sm">
-              Kontenjan için önceden bilgi alabilirsin
-            </span>
-          </div>
-        </div>
-      </div>
+        </header>
 
-      <Suspense fallback={<div className="py-24 text-center">Yükleniyor...</div>}>
-        <WeeklySchedule schedule={schedule} classDetailsMap={classDetailsMap} />
-      </Suspense>
+        <Suspense fallback={<div className="py-24 text-center">Yükleniyor...</div>}>
+          <WeeklySchedule schedule={schedule} classDetailsMap={classDetailsMap} />
+        </Suspense>
 
-      <Contact title="Programla İlgili Bilgi Al" description="Ders saatleri, kontenjan durumu veya katılmak istediğin ders hakkında bize yazabilirsin." />
+        <Contact title="Programla İlgili Bilgi Al" description="Ders saatleri, kontenjan durumu veya katılmak istediğin ders hakkında bize yazabilirsin." />
 
       </main>
 
