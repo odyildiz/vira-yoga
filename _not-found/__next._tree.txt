@@ -1,4 +1,4 @@
-:HL["/vira-yoga/_next/static/chunks/0z.az51epj~jb.css","style"]
+:HL["/vira-yoga/_next/static/chunks/0tlm9h8qyvipc.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Noto+Serif:wght@400&display=swap","style"]
 :HL["https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"JDb6m5bLkHBuxzJbDO310"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"O676yPWAUczIyCp4tvUDI"}
