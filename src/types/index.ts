@@ -36,6 +36,7 @@ export interface ClassInfo {
   duration: number;
   image: string;
   colSpan?: number;
+  scheduleType?: string;
 }
 
 export interface Teacher {

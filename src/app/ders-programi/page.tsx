@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WeeklySchedule from "@/components/WeeklySchedule";
@@ -65,7 +66,9 @@ export default async function DersProgramiPage() {
         </div>
       </div>
 
-      <WeeklySchedule schedule={schedule} classDetailsMap={classDetailsMap} />
+      <Suspense fallback={<div className="py-24 text-center">Yükleniyor...</div>}>
+        <WeeklySchedule schedule={schedule} classDetailsMap={classDetailsMap} />
+      </Suspense>
 
       <Contact title="Programla İlgili Bilgi Al" description="Ders saatleri, kontenjan durumu veya katılmak istediğin ders hakkında bize yazabilirsin." />
 

@@ -17,12 +17,13 @@ export default function DerslerPage() {
   const classes = [
     {
       title: "Başlangıç Yoga",
-      description: "Yoga’ya yeni başlayanlar için temel duruşların ve nefes farkındalığının anlatıldığı derstir.",
+      description: "Yoga'ya yeni başlayanlar için temel duruşların ve nefes farkındalığının anlatıldığı derstir.",
       level: "Başlangıç",
       tempo: "Sakin",
       duration: "60 dk",
       actionText: "Programı Gör",
       actionHref: "/ders-programi",
+      scheduleSlug: "Hatha",
     },
     {
       title: "Hatha Yoga",
@@ -32,6 +33,7 @@ export default function DerslerPage() {
       duration: "60 dk",
       actionText: "Programı Gör",
       actionHref: "/ders-programi",
+      scheduleSlug: "Hatha",
     },
     {
       title: "Vinyasa Yoga",
@@ -41,6 +43,7 @@ export default function DerslerPage() {
       duration: "60 dk",
       actionText: "Programı Gör",
       actionHref: "/ders-programi",
+      scheduleSlug: "Vinyasa",
     },
     {
       title: "Yin Yoga",
@@ -50,6 +53,7 @@ export default function DerslerPage() {
       duration: "60 dk",
       actionText: "Programı Gör",
       actionHref: "/ders-programi",
+      scheduleSlug: "Yin",
     },
     {
       title: "Nefes ve Meditasyon",
@@ -59,6 +63,7 @@ export default function DerslerPage() {
       duration: "45-60 dk",
       actionText: "Programı Gör",
       actionHref: "/ders-programi",
+      scheduleSlug: "Nefes",
     },
     {
       title: "Özel Ders",

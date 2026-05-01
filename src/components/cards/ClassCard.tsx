@@ -32,7 +32,10 @@ export default function ClassCard({ classInfo }: Props) {
           </p>
         </div>
         <div className="flex justify-end mt-6 pt-6 border-t border-surface-dim">
-          <Link href="/ders-programi" className="text-primary font-button text-button hover:underline">
+          <Link
+            href={classInfo.scheduleType ? `/ders-programi?type=${encodeURIComponent(classInfo.scheduleType)}` : "/ders-programi"}
+            className="text-primary font-button text-button hover:underline"
+          >
             Programı İncele
           </Link>
         </div>

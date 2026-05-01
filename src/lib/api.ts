@@ -88,6 +88,7 @@ export const fetchClasses = async (): Promise<ClassInfo[]> => {
     {
       id: "1",
       title: "Vinyasa Akışı",
+      scheduleType: "Vinyasa",
       description: "Nefesi harekete bağlayan, ısı, güç ve akıcılık oluşturmak için tasarlanmış dinamik bir pratik. Şehrin gerginliğini atmak için mükemmel.",
       duration: 60,
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC6T8YGtWtdYnzpujYnvXhzoiF4MsJYqpl5yIwswQQ5xY80PQPr7iOw_C5EoqdCR_SEJRuB1_3T2H39YOvvqQWfuPY_mMzaRYtW6n8WSgYFsWJEZcJdVRDClwRTyoB4h7j8Hji5biKVD3wCYauRNCaYlZFkhNQtIzjWCHeCl-pjV9EL5HXhhKiYve0NyvVzIp3f9McnAXskpcvPVjFwXHvEYk72YkyT4eNqSZgMdHMYHGUEF49oi6A__Su-PpFhuHqiPvrmFfUDjwqN",
@@ -96,6 +97,7 @@ export const fetchClasses = async (): Promise<ClassInfo[]> => {
     {
       id: "2",
       title: "Yin Yoga",
+      scheduleType: "Yin",
       description: "Bağ dokularını hedefleyen derin, pasif duruşlar. Tempolu şehir hayatı için gerekli bir dengeleyici.",
       duration: 75,
       image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop",
@@ -103,6 +105,7 @@ export const fetchClasses = async (): Promise<ClassInfo[]> => {
     {
       id: "3",
       title: "Rehberli Meditasyon",
+      scheduleType: "Meditasyon",
       description: "Rehberli nefes çalışmaları ve farkındalık teknikleri ile odaklanma ve zihinsel netlik geliştirin.",
       duration: 30,
       image: "https://images.pexels.com/photos/32062397/pexels-photo-32062397/free-photo-of-group-meditation-session-in-yoga-class.jpeg",
@@ -110,6 +113,7 @@ export const fetchClasses = async (): Promise<ClassInfo[]> => {
     {
       id: "4",
       title: "Hamak Akışı",
+      scheduleType: "Vinyasa",
       description: "Nefesi harekete bağlayan, ısı, güç ve akıcılık oluşturmak için tasarlanmış dinamik bir pratik. Şehrin gerginliğini atmak için mükemmel.",
       duration: 60,
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Aerial_Yoga.jpg/500px-Aerial_Yoga.jpg",

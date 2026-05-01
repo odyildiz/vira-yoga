@@ -9,6 +9,7 @@ interface DetailedClassCardProps {
   actionText: string;
   actionHref: string;
   note?: string;
+  scheduleSlug?: string;
 }
 
 export default function DetailedClassCard({
@@ -20,7 +21,12 @@ export default function DetailedClassCard({
   actionText,
   actionHref,
   note,
+  scheduleSlug,
 }: DetailedClassCardProps) {
+  const resolvedHref = scheduleSlug
+    ? `/ders-programi?type=${encodeURIComponent(scheduleSlug)}`
+    : actionHref;
+
   return (
     <div className="class-card bg-surface-container-lowest border border-surface-dim rounded-2xl p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
       <div className="mb-4">
@@ -31,7 +37,7 @@ export default function DetailedClassCard({
       </div>
       <div className="flex flex-col gap-3 mt-auto">
         <Link
-          href={actionHref}
+          href={resolvedHref}
           className="text-center bg-primary text-white font-button text-sm px-4 py-2.5 rounded-full hover:bg-orange-600 transition-colors w-full shadow-sm"
         >
           {actionText}
