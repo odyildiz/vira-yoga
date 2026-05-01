@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function UyelikPaketleriPage() {
   return (
     <>
-      <Navbar solid={true} />
+      <Navbar />
       
       <main className="flex-grow pb-24 md:pb-0">
         <header className="relative w-full h-[350px] md:h-[450px] flex items-center overflow-hidden bg-on-background mt-0">
