@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WeeklySchedule from "@/components/WeeklySchedule";
 import Contact from "@/components/Contact";
-import { fetchWeeklySchedules, fetchClassDetailsMap } from "@/lib/api";
+import { storageBaseUrl, fetchWeeklySchedules, fetchClassDetailsMap } from "@/lib/api";
 
 export const metadata: Metadata = {
   title: "Ders Programı | Vira Yoga",
@@ -24,7 +24,7 @@ export default async function DersProgramiPage() {
         <header className="relative w-full h-[350px] md:h-[450px] flex items-center overflow-hidden bg-on-background">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <img
-            src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?q=80&w=1200&auto=format&fit=crop"
+            src={`${storageBaseUrl}/image/hero/dersler-page-hero-image.avif`}
             className="absolute inset-0 w-full h-full object-cover"
             alt="Yoga Studio"
           />

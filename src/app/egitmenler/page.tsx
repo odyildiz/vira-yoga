@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import TeacherCard from "@/components/cards/TeacherCard";
 import FAQItem from "@/components/FAQItem";
 import Contact from "@/components/Contact";
-import { fetchTeachers } from "@/lib/api";
+import { storageBaseUrl, fetchTeachers } from "@/lib/api";
 
 export const metadata: Metadata = {
   title: "Eğitmenler | Vira Yoga",
@@ -47,7 +47,7 @@ export default async function EgitmenlerPage() {
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop"
+            src={`${storageBaseUrl}/image/hero/egitmenler-page-hero-image.avif`}
             className="absolute inset-0 w-full h-full object-cover"
             alt="Yoga Instructor"
           />
@@ -79,7 +79,7 @@ export default async function EgitmenlerPage() {
                 Vira Yoga’da her öğrencinin kendi ritminde ilerlemesini önemseriz. Derslerde güvenli hareket, nefes farkındalığı ve destekleyici bir alan oluşturmak önceliğimizdir.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-background p-8 rounded-2xl border border-surface-dim text-center shadow-sm">
                 <div className="w-14 h-14 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
@@ -90,7 +90,7 @@ export default async function EgitmenlerPage() {
                   Derslerde bedeni zorlamadan, farkındalıkla hareket etmeye odaklanılır.
                 </p>
               </div>
-              
+
               <div className="bg-background p-8 rounded-2xl border border-surface-dim text-center shadow-sm">
                 <div className="w-14 h-14 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="material-symbols-outlined text-[28px]">self_improvement</span>
@@ -100,7 +100,7 @@ export default async function EgitmenlerPage() {
                   Her öğrencinin deneyimi ve ihtiyacı farklıdır. Pratik buna göre desteklenir.
                 </p>
               </div>
-              
+
               <div className="bg-background p-8 rounded-2xl border border-surface-dim text-center shadow-sm">
                 <div className="w-14 h-14 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="material-symbols-outlined text-[28px]">diversity_1</span>

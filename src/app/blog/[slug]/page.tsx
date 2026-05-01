@@ -1,4 +1,4 @@
-import { fetchBlogPosts, fetchBlogPostBySlug } from "@/lib/api";
+import { storageBaseUrl, fetchBlogPosts, fetchBlogPostBySlug } from "@/lib/api";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -78,7 +78,7 @@ export default async function BlogDetailPage({ params }: Props) {
               <div className="mb-12 -mx-6 md:mx-0">
                 <div className="relative w-full aspect-video rounded-none md:rounded-2xl overflow-hidden bg-surface-variant">
                   <Image
-                    src={post.image}
+                    src={`${storageBaseUrl}${post.image}`}
                     alt={post.title}
                     fill
                     className="object-cover"
@@ -159,7 +159,7 @@ export default async function BlogDetailPage({ params }: Props) {
                   {item.image && (
                     <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-surface-variant mb-4">
                       <Image
-                        src={item.image}
+                        src={`${storageBaseUrl}${item.image}`}
                         alt={item.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -1,3 +1,4 @@
+import { storageBaseUrl } from "@/lib/api";
 import Link from "next/link";
 import { ClassInfo } from "@/types";
 
@@ -14,7 +15,7 @@ export default function ClassCard({ classInfo }: Props) {
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={classInfo.image}
+        src={`${storageBaseUrl}${classInfo.image}`}
         alt={classInfo.title}
         className="w-full h-48 md:h-64 object-cover"
       />

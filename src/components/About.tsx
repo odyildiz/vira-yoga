@@ -1,3 +1,4 @@
+import { storageBaseUrl } from "@/lib/api";
 import Link from "next/link";
 
 export default function About() {
@@ -21,7 +22,7 @@ export default function About() {
           <img 
             alt="Sunlight streaming through tall windows onto wooden yoga studio floor with a single rolled mat" 
             className="absolute inset-0 w-full h-full object-cover" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0KhOy0aSWagfIxL2WU_DUzIvakRAg4_031NjFuXMHMwpLVjDRIfgUZDhBngIVhRCxrLWe1l1QF8YDyspf7iy1zTN8ACFxfnJb_pEWXLtdDEWYUTKyQiDX6C8QCVIPK2xxWBheTZc8sPAO4QKU7iPlbUjFbsRvcj9kqH9TVXcRBtQvsmjif0yAlTyXqGvB1OqWRMT4tEI18aoTzc-fU3TIiiOhGiyIiCbH6mJlmAPW6Yc7nyFJ6iwLiKHrOvyPCs7ld6eOUpIoUulD"
+            src={`${storageBaseUrl}/images/about.jpg`}
           />
         </div>
       </div>

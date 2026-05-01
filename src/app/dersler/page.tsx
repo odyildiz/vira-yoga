@@ -1,3 +1,4 @@
+import { storageBaseUrl } from "@/lib/api";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -108,10 +109,10 @@ export default function DerslerPage() {
         {/* 1. Hero Section */}
         <header className="relative w-full h-[350px] md:h-[450px] flex items-center overflow-hidden bg-on-background mt-0">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <Image 
-            src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?q=80&w=1200&auto=format&fit=crop" 
-            className="absolute inset-0 w-full h-full object-cover" 
-            alt="Yoga Studio" 
+          <Image
+            src={`${storageBaseUrl}/image/hero/dersler-page-hero-image.avif`}
+            className="absolute inset-0 w-full h-full object-cover"
+            alt="Yoga Studio"
             fill
             priority
           />
@@ -159,9 +160,9 @@ export default function DerslerPage() {
                   <span>Rahat hareket edebileceğin kıyafetler tercih edebilirsin.</span>
                 </li>
               </ul>
-              <WhatsAppButton 
-                phoneNumber="905555555555" 
-                label="Bu Ders Bana Uygun mu?" 
+              <WhatsAppButton
+                phoneNumber="905555555555"
+                label="Bu Ders Bana Uygun mu?"
                 variant="primary"
               />
             </div>

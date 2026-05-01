@@ -1,3 +1,4 @@
+import { storageBaseUrl } from "@/lib/api";
 import { Teacher } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,7 +23,7 @@ export default function TeacherCard({ teacher }: Props) {
       <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-surface-container-high mx-auto mb-6 flex items-center justify-center border-[6px] border-primary/10 overflow-hidden relative shrink-0">
         {teacher.image ? (
           <Image
-            src={teacher.image}
+            src={`${storageBaseUrl}${teacher.image}`}
             alt={teacher.name}
             fill
             className="object-cover"

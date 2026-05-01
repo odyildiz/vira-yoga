@@ -1,3 +1,5 @@
+export const storageBaseUrl = process.env.NEXT_PUBLIC_STORAGE_BASE_URL || "https://odyildiz.github.io/vira-yoga/";
+
 import { Schedule, WeeklyScheduleItem, ClassDetails, ClassInfo, Teacher, BlogPost, Membership, ContactInfo } from "@/types";
 
 export const fetchSchedules = async (): Promise<Schedule[]> => {
@@ -11,7 +13,6 @@ export const fetchSchedules = async (): Promise<Schedule[]> => {
       level: "Her Seviye",
       instructor: "Sarah Jenkins",
       studio: "Stüdyo A",
-      image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "2",
@@ -22,7 +23,6 @@ export const fetchSchedules = async (): Promise<Schedule[]> => {
       level: "Her Seviye",
       instructor: "Marcus Chen",
       studio: "Stüdyo B",
-      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "3",
@@ -34,7 +34,6 @@ export const fetchSchedules = async (): Promise<Schedule[]> => {
       instructor: "Elena Rostova",
       studio: "Bekleme Listesi",
       opacity: 60,
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop",
     },
   ];
 };
@@ -56,29 +55,34 @@ export const fetchWeeklySchedules = async (): Promise<WeeklyScheduleItem[]> => {
 export const fetchClassDetailsMap = async (): Promise<Record<string, ClassDetails>> => {
   return {
     'Hatha Yoga': {
-        description: 'Duruş, nefes ve beden farkındalığını dengeli şekilde çalışmak isteyenler için uygundur.',
-        suitableFor: 'Yeni başlayanlar ve sakin tempoda pratik yapmak isteyenler.',
-        ctas: [{label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567'}, {label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567'}]
+      description: 'Duruş, nefes ve beden farkındalığını dengeli şekilde çalışmak isteyenler için uygundur.',
+      suitableFor: 'Yeni başlayanlar ve sakin tempoda pratik yapmak isteyenler.',
+      image: "/images/class-detail-1.jpg",
+      ctas: [{ label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567' }, { label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567' }]
     },
     'Vinyasa Yoga': {
-        description: 'Nefesle hareketi birleştiren, daha akışkan ve dinamik bir yoga pratiğidir.',
-        suitableFor: 'Daha hareketli bir ders isteyen ve temel yoga deneyimi olan kişiler.',
-        ctas: [{label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567'}, {label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567'}]
+      description: 'Nefesle hareketi birleştiren, daha akışkan ve dinamik bir yoga pratiğidir.',
+      suitableFor: 'Daha hareketli bir ders isteyen ve temel yoga deneyimi olan kişiler.',
+      image: "/images/class-detail-2.jpg",
+      ctas: [{ label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567' }, { label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567' }]
     },
     'Yin Yoga': {
-        description: 'Daha yavaş, sakin ve gevşeme odaklı bir pratik arayanlar için uygundur.',
-        suitableFor: 'Her seviyeden katılımcı için uygundur.',
-        ctas: [{label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567'}, {label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567'}]
+      description: 'Daha yavaş, sakin ve gevşeme odaklı bir pratik arayanlar için uygundur.',
+      suitableFor: 'Her seviyeden katılımcı için uygundur.',
+      image: "/images/class-detail-3.jpg",
+      ctas: [{ label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567' }, { label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567' }]
     },
     'Başlangıç Yoga': {
-        description: 'Yoga’ya yeni başlayanlar için temel duruşların ve nefes farkındalığının anlatıldığı derstir.',
-        suitableFor: 'Daha önce yoga yapmamış kişiler.',
-        ctas: [{label: 'Bu Ders Bana Uygun mu?', type: 'secondary', link: 'https://wa.me/905551234567'}, {label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567'}]
+      description: 'Yoga’ya yeni başlayanlar için temel duruşların ve nefes farkındalığının anlatıldığı derstir.',
+      suitableFor: 'Daha önce yoga yapmamış kişiler.',
+      image: "/images/class-detail-4.jpg",
+      ctas: [{ label: 'Bu Ders Bana Uygun mu?', type: 'secondary', link: 'https://wa.me/905551234567' }, { label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567' }]
     },
     'Nefes ve Meditasyon': {
-        description: 'Nefes farkındalığı, odaklanma ve zihinsel sakinlik üzerine çalışılır.',
-        suitableFor: 'Sakin bir pratik isteyen herkes.',
-        ctas: [{label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567'}, {label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567'}]
+      description: 'Nefes farkındalığı, odaklanma ve zihinsel sakinlik üzerine çalışılır.',
+      suitableFor: 'Sakin bir pratik isteyen herkes.',
+      image: "/images/class-detail-5.jpg",
+      ctas: [{ label: 'WhatsApp’tan Sor', type: 'primary', link: 'https://wa.me/905551234567' }, { label: 'Bizi Ara', type: 'secondary', link: 'tel:+905551234567' }]
     }
   };
 };
@@ -91,7 +95,7 @@ export const fetchClasses = async (): Promise<ClassInfo[]> => {
       scheduleType: "Vinyasa",
       description: "Nefesi harekete bağlayan, ısı, güç ve akıcılık oluşturmak için tasarlanmış dinamik bir pratik. Şehrin gerginliğini atmak için mükemmel.",
       duration: 60,
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC6T8YGtWtdYnzpujYnvXhzoiF4MsJYqpl5yIwswQQ5xY80PQPr7iOw_C5EoqdCR_SEJRuB1_3T2H39YOvvqQWfuPY_mMzaRYtW6n8WSgYFsWJEZcJdVRDClwRTyoB4h7j8Hji5biKVD3wCYauRNCaYlZFkhNQtIzjWCHeCl-pjV9EL5HXhhKiYve0NyvVzIp3f9McnAXskpcvPVjFwXHvEYk72YkyT4eNqSZgMdHMYHGUEF49oi6A__Su-PpFhuHqiPvrmFfUDjwqN",
+      image: "image/class/vinyasa-class-image.png",
       colSpan: 2,
     },
     {
@@ -100,7 +104,7 @@ export const fetchClasses = async (): Promise<ClassInfo[]> => {
       scheduleType: "Yin",
       description: "Bağ dokularını hedefleyen derin, pasif duruşlar. Tempolu şehir hayatı için gerekli bir dengeleyici.",
       duration: 75,
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop",
+      image: "image/class/yin-yoga-class-image.avif",
     },
     {
       id: "3",
@@ -108,7 +112,7 @@ export const fetchClasses = async (): Promise<ClassInfo[]> => {
       scheduleType: "Meditasyon",
       description: "Rehberli nefes çalışmaları ve farkındalık teknikleri ile odaklanma ve zihinsel netlik geliştirin.",
       duration: 30,
-      image: "https://images.pexels.com/photos/32062397/pexels-photo-32062397/free-photo-of-group-meditation-session-in-yoga-class.jpeg",
+      image: "image/class/meditasyon-class-image.jpeg",
     },
     {
       id: "4",
@@ -116,7 +120,7 @@ export const fetchClasses = async (): Promise<ClassInfo[]> => {
       scheduleType: "Vinyasa",
       description: "Nefesi harekete bağlayan, ısı, güç ve akıcılık oluşturmak için tasarlanmış dinamik bir pratik. Şehrin gerginliğini atmak için mükemmel.",
       duration: 60,
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Aerial_Yoga.jpg/500px-Aerial_Yoga.jpg",
+      image: "image/class/hamak-class-image.jpg",
       colSpan: 2,
     },
   ];
@@ -126,30 +130,32 @@ export const fetchTeachers = async (): Promise<Teacher[]> => {
   return [
     {
       id: "1",
-      name: "Ayşe Demir",
+      name: "Selen Sena Şenocak",
       specialty: "Hatha Yoga, Başlangıç Yoga",
+      image: "image/teacher/teacher-selen-sena-senocak.jpg",
       bio: "Derslerinde güvenli hizalanma, nefes ve beden farkındalığına odaklanır. Yeni başlayanlar için dengeleyici bir alan sunar.",
       classes: ["Başlangıç Yoga", "Hatha Yoga"],
       socials: {
-        instagram: "#",
-        linkedin: "#",
-        twitter: "#",
+        instagram: "https://www.instagram.com/selensenocak/"
       },
     },
     {
       id: "2",
-      name: "Mert Kaya",
+      name: "Yogi Kazım",
       specialty: "Vinyasa Yoga, Dinamik Pratik",
+      image: "image/teacher/teacher-yogi-kazim.jpeg",
       bio: "Nefesle hareketi birleştiren akışkan ve dinamik dersler sunar.",
       classes: ["Vinyasa Yoga"],
       socials: {
         instagram: "#",
+        twitter: "#"
       },
     },
     {
       id: "3",
       name: "Zeynep Aral",
       specialty: "Yin Yoga, Nefes ve Meditasyon",
+      image: "/image/teacher/teacher-zeynep-aral.webp",
       bio: "Sakinlik, gevşeme ve içsel farkındalık üzerine alan açar.",
       classes: ["Yin Yoga", "Nefes ve Meditasyon"],
       socials: {
@@ -161,6 +167,7 @@ export const fetchTeachers = async (): Promise<Teacher[]> => {
       id: "4",
       name: "Elif Yılmaz",
       specialty: "Özel Ders, Başlangıç Yoga",
+      image: "/images/teacher-4.jpg",
       bio: "Kişinin seviyesine ve ihtiyacına göre güvenli, sade ve destekleyici bir pratik oluşturur.",
       classes: ["Özel Ders", "Başlangıç Yoga"],
       socials: {
@@ -178,7 +185,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       title: "İlk Yoga Dersine Nasıl Hazırlanılır?",
       excerpt: "İlk ders öncesi kıyafet, mat, zamanlama ve dikkat etmen gereken temel noktalar.",
       slug: "ilk-yoga-dersine-nasil-hazirlanilir",
-      image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2070&auto=format&fit=crop",
+      image: "/image/blog/blog-1.jpg",
       readTime: "4 dk okuma",
       category: "Yeni Başlayanlar",
       content: [
@@ -197,7 +204,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       title: "Yoga İçin Esnek Olmak Gerekir mi?",
       excerpt: "Yoga'ya başlamak için esnek olman gerekmez. Pratik, bedeni tanımakla başlar.",
       slug: "yoga-icin-esnek-olmak-gerekir-mi",
-      image: "https://images.unsplash.com/photo-1588286840104-a2123ccb8979?q=80&w=2070&auto=format&fit=crop",
+      image: "/image/blog/blog-2.jpg",
       readTime: "3 dk okuma",
       category: "Yeni Başlayanlar",
       content: [
@@ -213,7 +220,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       title: "Hatha Yoga Kimler İçin Uygun?",
       excerpt: "Hatha Yoga'nın temposunu, seviyesini ve kimler için iyi bir başlangıç olabileceğini anlattık.",
       slug: "hatha-yoga-kimler-icin-uygun",
-      image: "https://images.unsplash.com/photo-1552196563-55259262490b?q=80&w=1926&auto=format&fit=crop",
+      image: "/image/blog/blog-3.jpg",
       readTime: "4 dk okuma",
       category: "Ders Türleri",
       content: [
@@ -229,7 +236,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       title: "Vinyasa Yoga Nedir?",
       excerpt: "Nefesle hareketi birleştiren daha akışkan ve dinamik yoga pratiğini tanıyalım.",
       slug: "vinyasa-yoga-nedir",
-      image: "https://images.unsplash.com/photo-1510804443144-88b90ed0abdb?q=80&w=2070&auto=format&fit=crop",
+      image: "/image/blog/blog-4.jpg",
       readTime: "4 dk okuma",
       category: "Ders Türleri",
       content: [
@@ -245,7 +252,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       title: "Yin Yoga Neden Daha Sakin Bir Pratiktir?",
       excerpt: "Yin Yoga'nın yavaş temposunu, gevşeme odaklı yapısını ve kimler için uygun olduğunu anlattık.",
       slug: "yin-yoga-neden-daha-sakin-bir-pratiktir",
-      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1999&auto=format&fit=crop",
+      image: "/image/blog/blog-5.jpg",
       readTime: "4 dk okuma",
       category: "Ders Türleri",
       content: [
@@ -261,7 +268,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       title: "Nefes Farkındalığı Neden Önemlidir?",
       excerpt: "Nefesi fark etmek, pratik sırasında bedeni ve zihni daha sakin izlemeye yardımcı olabilir.",
       slug: "nefes-farkindaligi-neden-onemlidir",
-      image: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=2119&auto=format&fit=crop",
+      image: "/image/blog/blog-6.jpg",
       readTime: "3 dk okuma",
       category: "Pratik & Farkındalık",
       content: [
@@ -277,7 +284,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       title: "Meditasyona Başlamak İçin Küçük Bir Rehber",
       excerpt: "Meditasyona yeni başlayanlar için sade, uygulanabilir ve kısa bir başlangıç rehberi.",
       slug: "meditasyona-baslamak-icin-kucuk-bir-rehber",
-      image: "https://images.unsplash.com/photo-1536623975707-c4b3b2af565d?q=80&w=2070&auto=format&fit=crop",
+      image: "/image/blog/blog-7.jpg",
       readTime: "5 dk okuma",
       category: "Pratik & Farkındalık",
       content: [
@@ -293,7 +300,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       title: "Vira Yoga'da İlk Gün Seni Neler Bekler?",
       excerpt: "Stüdyoya ilk gelişinde karşılaşacağın süreci ve ders öncesi küçük detayları anlattık.",
       slug: "vira-yogada-ilk-gun-seni-neler-bekler",
-      image: "https://images.unsplash.com/photo-1545389336-cf090694435e?q=80&w=1964&auto=format&fit=crop",
+      image: "/image/blog/blog-8.jpg",
       readTime: "4 dk okuma",
       category: "Stüdyo Hayatı",
       content: [
@@ -321,7 +328,6 @@ export const fetchMemberships = async (): Promise<Membership[]> => {
       price: "₺X",
       features: ["1 grup ders hakkı", "Seçili grup derslerinde geçerli"],
       buttonText: "Satın Al",
-      image: "https://images.unsplash.com/photo-1552196563-552592f13b63?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "2",
@@ -335,7 +341,6 @@ export const fetchMemberships = async (): Promise<Membership[]> => {
         "Temel derslere katılım imkanı",
       ],
       buttonText: "Hemen Başla",
-      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "3",
@@ -348,7 +353,6 @@ export const fetchMemberships = async (): Promise<Membership[]> => {
         "Tüm grup derslerinde geçerli",
       ],
       buttonText: "Satın Al",
-      image: "https://images.unsplash.com/photo-1517436073-3b1b1160a57e?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "4",
@@ -358,7 +362,6 @@ export const fetchMemberships = async (): Promise<Membership[]> => {
       priceSuffix: " /ay",
       features: ["Sınırsız stüdyo dersi", "Geçerlilik süresi: 30 gün"],
       buttonText: "Satın Al",
-      image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=600&auto=format&fit=crop",
     },
     {
       id: "5",
@@ -368,7 +371,6 @@ export const fetchMemberships = async (): Promise<Membership[]> => {
       priceSuffix: " /3 ay",
       features: ["Sınırsız stüdyo dersi", "Geçerlilik süresi: 90 gün"],
       buttonText: "Satın Al",
-      image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=600&auto=format&fit=crop",
     },
   ];
 };
@@ -380,7 +382,6 @@ export const fetchContacts = async (): Promise<ContactInfo[]> => {
       icon: "location_on",
       title: "Adres",
       details: "Vira Yoga Stüdyosu\nModa Cad. No: 123\nKadıköy, İstanbul",
-      image: "https://images.unsplash.com/photo-1497250681554-182325dd7872?q=80&w=600&auto=format&fit=crop",
       action: {
         text: "Yol Tarifi Al",
         icon: "directions",
@@ -394,7 +395,6 @@ export const fetchContacts = async (): Promise<ContactInfo[]> => {
       icon: "call",
       title: "Telefon",
       details: "+90 (555) 123 45 67\nHafta içi: 09:00 - 20:00",
-      image: "https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=600&auto=format&fit=crop",
       action: {
         text: "Bizi Ara",
         icon: "call",
@@ -407,7 +407,6 @@ export const fetchContacts = async (): Promise<ContactInfo[]> => {
       icon: "mail",
       title: "E-posta",
       details: "info@virayoga.com\niletisim@virayoga.com",
-      image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=600&auto=format&fit=crop",
       action: {
         text: "E-mail Gönder",
         icon: "mail",

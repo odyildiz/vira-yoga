@@ -1,3 +1,4 @@
+import { storageBaseUrl } from "@/lib/api";
 import { BlogPost } from "@/types";
 import Link from "next/link";
 
@@ -11,7 +12,7 @@ export default function BlogCard({ post }: Props) {
       {post.image && (
         <div className="h-48 relative overflow-hidden bg-surface-variant">
           <img
-            src={post.image}
+            src={`${storageBaseUrl}${post.image}`}
             alt={post.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />

@@ -8,7 +8,6 @@ export interface Schedule {
   instructor: string;
   studio: string;
   opacity?: number;
-  image?: string;
 }
 
 export interface WeeklyScheduleItem {
@@ -24,6 +23,7 @@ export interface WeeklyScheduleItem {
 }
 
 export interface ClassDetails {
+  image?: string;
   description: string;
   suitableFor: string;
   ctas: { label: string; type: "primary" | "secondary"; link: string }[];
@@ -80,7 +80,6 @@ export interface Membership {
   features: string[];
   highlight?: string;
   buttonText: string;
-  image?: string;
 }
 
 export interface ContactInfo {
@@ -88,7 +87,6 @@ export interface ContactInfo {
   icon: string;
   title: string;
   details: React.ReactNode | string;
-  image?: string;
   action: {
     text: string;
     icon?: string;

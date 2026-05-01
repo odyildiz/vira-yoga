@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useMemo, Suspense } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { storageBaseUrl } from "@/lib/api";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { WeeklyScheduleItem, ClassDetails } from "@/types";
 
@@ -540,6 +542,16 @@ function ScheduleContent({ schedule, classDetailsMap }: Props) {
             id="modal-content"
             className="bg-surface w-full md:w-[500px] rounded-t-2xl md:rounded-2xl shadow-2xl transition-transform duration-300 max-h-[90vh] overflow-y-auto"
           >
+            {classDetails.image && (
+              <div className="relative w-full h-48 md:h-64 rounded-t-2xl md:rounded-t-2xl overflow-hidden shrink-0">
+                <Image
+                  src={`${storageBaseUrl}${classDetails.image}`}
+                  alt={selectedClass.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            )}
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>
