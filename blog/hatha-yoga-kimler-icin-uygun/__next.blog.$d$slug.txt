@@ -2,4 +2,4 @@
 2:I[96557,["/vira-yoga/_next/static/chunks/16qh-hkzil2hv.js","/vira-yoga/_next/static/chunks/0ytqq~rfstb~n.js"],"default"]
 3:I[66491,["/vira-yoga/_next/static/chunks/16qh-hkzil2hv.js","/vira-yoga/_next/static/chunks/0ytqq~rfstb~n.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"Sk0QE6quhPn_0mHOtH4kY"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"gQm5Ejc3bsPlNsIMtYlH4"}
