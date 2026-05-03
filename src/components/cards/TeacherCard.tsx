@@ -1,7 +1,6 @@
 import { storageBaseUrl } from "@/lib/api";
 import { Teacher } from "@/types";
 import Image from "next/image";
-import Link from "next/link";
 
 interface Props {
   teacher: Teacher;
@@ -47,18 +46,6 @@ export default function TeacherCard({ teacher }: Props) {
           {teacher.bio}
         </p>
       )}
-
-
-
-      {/* View Schedule Button */}
-      <div className="mt-auto mb-6">
-        <Link
-          href={`/ders-programi?teacher=${encodeURIComponent(teacher.name.split(" ")[0])}`}
-          className="inline-block border border-primary text-primary font-button text-sm px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-colors"
-        >
-          Programı Gör
-        </Link>
-      </div>
 
       {/* Social Media Buttons */}
       <div className="flex justify-center gap-4 border-t border-surface-dim pt-6">

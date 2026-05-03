@@ -174,7 +174,7 @@ function ScheduleContent({ schedule, classDetailsMap }: Props) {
     ? classDetailsMap[selectedClass.name] || classDetailsMap["Hatha Yoga"]
     : null;
 
-  const hasActiveFilters = filters.level !== "all" || filters.type !== "all" || filters.teacher !== "all";
+  const hasActiveFilters = filters.level !== "all" || filters.type !== "all";
 
   return (
     <>
@@ -184,7 +184,7 @@ function ScheduleContent({ schedule, classDetailsMap }: Props) {
           id="ScheduleFilters"
           className="mb-xl bg-surface p-4 md:p-6 rounded-xl border border-surface-dim"
         >
-          <div className="grid grid-cols-3 gap-3 md:gap-6">
+          <div className="grid grid-cols-2 gap-3 md:gap-6">
             {/* Level Filter */}
             <div>
               <h3 className="font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-wider text-[10px] md:text-xs">
@@ -218,23 +218,6 @@ function ScheduleContent({ schedule, classDetailsMap }: Props) {
                 <option value="Yin">Yin</option>
                 <option value="Nefes">Nefes</option>
                 <option value="Meditasyon">Meditasyon</option>
-              </select>
-            </div>
-
-            {/* Teacher Filter */}
-            <div>
-              <h3 className="font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-wider text-[10px] md:text-xs">
-                Eğitmen
-              </h3>
-              <select
-                value={filters.teacher}
-                onChange={(e) => handleFilterChange("teacher", e.target.value)}
-                className="w-full bg-surface-container-lowest border border-outline text-on-background rounded-lg px-2 md:px-4 py-2 font-body-md text-xs md:text-sm focus:ring-primary focus:border-primary"
-              >
-                <option value="all">Tümü</option>
-                <option value="Ayşe">Ayşe</option>
-                <option value="Mert">Mert</option>
-                <option value="Zeynep">Zeynep</option>
               </select>
             </div>
           </div>
@@ -328,7 +311,7 @@ function ScheduleContent({ schedule, classDetailsMap }: Props) {
                       {selectedDayName}
                     </span>
                     <span className="font-button text-sm">{selectedDateStr}</span>
-                    {hasClassOnDayName(selectedDayName) && (
+                    {hasActiveFilters && hasClassOnDayName(selectedDayName) && (
                       <span className="w-1.5 h-1.5 rounded-full mt-1 bg-white"></span>
                     )}
                   </button>
@@ -353,7 +336,7 @@ function ScheduleContent({ schedule, classDetailsMap }: Props) {
                           {dateItem.dayName}
                         </span>
                         <span className="font-button text-sm">{dateItem.dateStr}</span>
-                        {hasClass && (
+                        {hasActiveFilters && hasClass && (
                           <span className={`w-1.5 h-1.5 rounded-full mt-1 ${isActive ? "bg-white" : "bg-primary"}`}></span>
                         )}
                       </button>
@@ -425,7 +408,7 @@ function ScheduleContent({ schedule, classDetailsMap }: Props) {
                         }`}
                       >
                         <span>{dateObj.getDate()}</span>
-                        {hasClass && (
+                        {hasActiveFilters && hasClass && (
                           <span className={`w-1.5 h-1.5 rounded-full mt-0.5 ${isActive ? "bg-white" : "bg-primary"}`}></span>
                         )}
                       </button>
