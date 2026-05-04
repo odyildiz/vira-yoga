@@ -28,8 +28,8 @@ export default function Navbar({ solid = false }: { solid?: boolean }) {
   ];
 
   const effectiveIsScrolled = solid || isScrolled;
-  const ctaLink = isHomePage ? "/yeni-baslayanlar" : "#contact";
-  const ctaText = isHomePage ? "Yogaya Yeni Başlayanlar" : "Bize Ulaş";
+  const ctaLink = "#contact";
+  const ctaText = "Bize Ulaş";
 
   return (
     <>

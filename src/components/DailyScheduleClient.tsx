@@ -65,6 +65,9 @@ export default function DailyScheduleClient({ schedules }: Props) {
 
   return (
     <section id="schedule" className="py-xxl px-gutter max-w-max_width mx-auto">
+      <div className="text-center mb-xl">
+        <h2 className="font-h2 text-h2 text-on-background mb-4">Program</h2>
+      </div>
       <div className="flex flex-col md:flex-row justify-between items-center mb-xl border-b border-surface-dim pb-4">
         <div className="flex-1 flex items-center gap-4 w-full md:w-auto justify-between md:justify-start">
           <div className="grid grid-cols-[auto_1fr_auto] items-center gap-2 w-[300px] md:w-[360px] mx-auto md:mx-0 shrink-0">

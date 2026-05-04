@@ -14,11 +14,11 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <Schedule />
       <Classes />
+      <Schedule />
+      <Memberships />
       <Teachers />
       <Blog />
-      <Memberships />
       <About />
       <Contact title="Bizimle İletişime Geçin" description="Sorularınız, ders paketleri veya stüdyomuz hakkında detaylı bilgi almak için buradayız." />
       <Footer />

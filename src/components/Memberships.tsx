@@ -19,37 +19,39 @@ export default async function Memberships({
   return (
     <section
       id="memberships"
-      className={`${hideHeader ? "pt-12" : "pt-32 md:pt-48"} pb-20 px-gutter bg-background max-w-max_width mx-auto`}
+      className={`${hideHeader ? "pt-12 bg-background" : "py-xxl bg-surface-container-low"} px-gutter`}
     >
-      {!hideHeader && (
-        <div className="text-center mb-xl">
-          {isMainHeading ? (
-            <h1 className="font-h2 text-h2 text-on-background mb-4">{title}</h1>
-          ) : (
-            <h2 className="font-h2 text-h2 text-on-background mb-4">{title}</h2>
-          )}
-          <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-            Tek ders deneyiminden düzenli pratiğe kadar farklı ihtiyaçlara uygun
-            paketlerimizi inceleyebilirsin. Paketler hakkında detaylı bilgi almak
-            veya sana en uygun seçeneği belirlemek için bizimle iletişime
-            geçebilirsin.
-          </p>
-        </div>
-      )}
+      <div className="max-w-max_width mx-auto">
+        {!hideHeader && (
+          <div className="text-center mb-xl">
+            {isMainHeading ? (
+              <h1 className="font-h2 text-h2 text-on-background mb-4">{title}</h1>
+            ) : (
+              <h2 className="font-h2 text-h2 text-on-background mb-4">{title}</h2>
+            )}
+            <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+              Tek ders deneyiminden düzenli pratiğe kadar farklı ihtiyaçlara uygun
+              paketlerimizi inceleyebilirsin. Paketler hakkında detaylı bilgi almak
+              veya sana en uygun seçeneği belirlemek için bizimle iletişime
+              geçebilirsin.
+            </p>
+          </div>
+        )}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-lg justify-center items-center">
-        {topMemberships.map((membership) => (
-          <MembershipCard key={membership.id} membership={membership} />
-        ))}
-      </div>
-
-      {bottomMemberships.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-lg justify-center items-center mt-lg max-w-4xl mx-auto">
-          {bottomMemberships.map((membership) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-lg justify-center items-center">
+          {topMemberships.map((membership) => (
             <MembershipCard key={membership.id} membership={membership} />
           ))}
         </div>
-      )}
+
+        {bottomMemberships.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-lg justify-center items-center mt-lg max-w-4xl mx-auto">
+            {bottomMemberships.map((membership) => (
+              <MembershipCard key={membership.id} membership={membership} />
+            ))}
+          </div>
+        )}
+      </div>
     </section>
   );
 }
