@@ -25,6 +25,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Vira Yoga`,
     description: post.excerpt,
+    openGraph: {
+      title: `${post.title} | Vira Yoga`,
+      description: post.excerpt,
+      url: `https://virayoga.com/blog/${slug}`,
+      images: post.image ? [{ url: post.image }] : undefined,
+    },
+    alternates: {
+      canonical: `https://virayoga.com/blog/${slug}`,
+    },
   };
 }
 

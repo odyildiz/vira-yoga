@@ -12,6 +12,14 @@ import WhatsAppButton from "@/components/buttons/WhatsAppButton";
 export const metadata: Metadata = {
   title: "Dersler | Vira Yoga",
   description: "Vira Yoga’da Başlangıç Yoga, Hatha, Vinyasa, Yin, Nefes ve Meditasyon derslerini inceleyin. Size uygun dersi birlikte seçelim.",
+  openGraph: {
+    title: "Dersler | Vira Yoga",
+    description: "Vira Yoga’da Başlangıç Yoga, Hatha, Vinyasa, Yin, Nefes ve Meditasyon derslerini inceleyin. Size uygun dersi birlikte seçelim.",
+    url: "https://virayoga.com/dersler",
+  },
+  alternates: {
+    canonical: "https://virayoga.com/dersler",
+  },
 };
 
 export default function DerslerPage() {
@@ -112,7 +120,7 @@ export default function DerslerPage() {
           <Image
             src={`${storageBaseUrl}/image/hero/dersler-page-hero-image.avif`}
             className="absolute inset-0 w-full h-full object-cover"
-            alt="Yoga Studio"
+            alt="Vira Yoga'da farklı seviyelere uygun yoga dersleri"
             fill
             priority
           />

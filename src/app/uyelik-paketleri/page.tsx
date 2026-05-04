@@ -8,6 +8,14 @@ import Contact from "@/components/Contact";
 export const metadata: Metadata = {
   title: "Üyelik Paketleri ve Fiyatlar | Vira Yoga",
   description: "Vira Yoga üyelik paketleri, grup ders seçenekleri, ödeme yöntemleri ve üyelik koşulları hakkında bilgi alın. Size uygun paketi birlikte seçelim.",
+  openGraph: {
+    title: "Üyelik Paketleri ve Fiyatlar | Vira Yoga",
+    description: "Vira Yoga üyelik paketleri, grup ders seçenekleri, ödeme yöntemleri ve üyelik koşulları hakkında bilgi alın.",
+    url: "https://virayoga.com/uyelik-paketleri",
+  },
+  alternates: {
+    canonical: "https://virayoga.com/uyelik-paketleri",
+  },
 };
 
 export default function UyelikPaketleriPage() {
@@ -22,7 +30,7 @@ export default function UyelikPaketleriPage() {
           <img
             src={`${storageBaseUrl}/image/hero/uyelikler-page-hero-image.avif`}
             className="absolute inset-0 w-full h-full object-cover"
-            alt="Yoga Studio"
+            alt="Vira Yoga stüdyosu üyelik paketleri ve fiyat avantajları"
           />
           <div className="relative z-20 px-8 md:px-16 lg:px-24 w-full flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-24 max-w-7xl mx-auto">
             <h1 className="font-h1 text-[36px] md:text-[56px] text-white tracking-widest mb-4 drop-shadow-md">

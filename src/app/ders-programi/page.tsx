@@ -9,6 +9,14 @@ import { storageBaseUrl, fetchWeeklySchedules, fetchClassDetailsMap } from "@/li
 export const metadata: Metadata = {
   title: "Ders Programı | Vira Yoga",
   description: "Vira Yoga haftalık ders saatlerini inceleyin. Hatha, Vinyasa, Yin Yoga ve daha fazlası için uygun derse kolayca ulaşın.",
+  openGraph: {
+    title: "Ders Programı | Vira Yoga",
+    description: "Vira Yoga haftalık ders saatlerini inceleyin. Hatha, Vinyasa, Yin Yoga ve daha fazlası için uygun derse kolayca ulaşın.",
+    url: "https://virayoga.com/ders-programi",
+  },
+  alternates: {
+    canonical: "https://virayoga.com/ders-programi",
+  },
 };
 
 export default async function DersProgramiPage() {
@@ -26,7 +34,7 @@ export default async function DersProgramiPage() {
           <img
             src={`${storageBaseUrl}/image/hero/dersler-page-hero-image.avif`}
             className="absolute inset-0 w-full h-full object-cover"
-            alt="Yoga Studio"
+            alt="Vira Yoga haftalık ders programı ve yoga stüdyosu atmosferi"
           />
           <div className="relative z-20 px-6 md:px-16 lg:px-24 w-full flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-24 max-w-7xl mx-auto">
             <h1 className="font-h1 text-[30px] md:text-[56px] text-white tracking-widest mb-4 drop-shadow-md">

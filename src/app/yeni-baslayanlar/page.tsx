@@ -7,6 +7,14 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Yogaya Yeni Başlayanlar | Vira Yoga",
   description: "Yoga’ya yeni başlıyorsan Vira Yoga’da ilk ders sürecini, ne getirmen gerektiğini ve sana uygun dersi nasıl seçeceğini keşfet.",
+  openGraph: {
+    title: "Yogaya Yeni Başlayanlar | Vira Yoga",
+    description: "Yoga’ya yeni başlıyorsan Vira Yoga’da ilk ders sürecini, ne getirmen gerektiğini ve sana uygun dersi nasıl seçeceğini keşfet.",
+    url: "https://virayoga.com/yeni-baslayanlar",
+  },
+  alternates: {
+    canonical: "https://virayoga.com/yeni-baslayanlar",
+  },
 };
 
 export default function YeniBaslayanlarPage() {
