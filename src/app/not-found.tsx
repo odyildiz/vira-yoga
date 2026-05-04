@@ -12,7 +12,7 @@ export default function NotFound() {
         <h2 className="font-h2 text-[32px] md:text-[40px] text-on-background mb-4">Sayfa Bulunamadı</h2>
         <p className="font-body-lg text-on-surface-variant max-w-2xl mb-12 mx-auto">
           Aradığınız sayfa silinmiş, adı değiştirilmiş veya geçici olarak ulaşılamıyor olabilir. 
-          Vira Yoga'nın sunduğu diğer içeriklere göz atmaya ne dersiniz?
+          Vira Yoga&apos;nın sunduğu diğer içeriklere göz atmaya ne dersiniz?
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link

@@ -38,9 +38,12 @@ export default function DetailedClassCard({
       <div className="flex flex-col gap-3 mt-auto">
         <Link
           href={resolvedHref}
-          className="text-center bg-primary text-white font-button text-sm px-4 py-2.5 rounded-full hover:bg-orange-600 transition-colors w-full shadow-sm"
+          className="flex items-center justify-center gap-2 text-center bg-primary text-white font-button text-sm px-4 py-2.5 rounded-full hover:bg-orange-600 transition-colors w-full shadow-sm"
         >
-          {actionText}
+          {actionText === "Bizi Ara" && (
+            <span className="material-symbols-outlined text-[16px]">call</span>
+          )}
+          <span>{actionText}</span>
         </Link>
         {note && (
           <p className="text-[10px] text-center text-on-surface-variant mt-2 italic">

@@ -227,7 +227,7 @@ export default function YeniBaslayanlarPage() {
               <span className="inline-block bg-primary-container text-on-primary-container text-xs font-bold px-3 py-1 rounded-full mb-4">Temel Adımlar</span>
               <h3 className="font-h3 text-xl text-on-background mb-3">Başlangıç Dersleri</h3>
               <p className="text-on-surface-variant text-sm">
-                Yoga'ya yeni başlayanlar için temel duruşların ve nefes farkındalığının anlatıldığı sakin tempolu pratiklerdir.
+                Yoga&apos;ya yeni başlayanlar için temel duruşların ve nefes farkındalığının anlatıldığı sakin tempolu pratiklerdir.
               </p>
             </div>
             <div className="bg-surface-container-low p-8 rounded-2xl border border-surface-variant">
@@ -240,7 +240,7 @@ export default function YeniBaslayanlarPage() {
           </div>
 
           <p className="text-on-surface-variant text-md mb-6">
-            Sana en uygun dersi birlikte seçmek için bizi arayabilir ya da WhatsApp’tan yazabilirsin.
+            Sana en uygun dersi birlikte seçmek için bizi arayabilir ya da WhatsApp&apos;tan yazabilirsin.
           </p>
           <Link href="/#schedule" className="inline-block bg-surface text-on-surface border border-outline-variant font-button px-8 py-3 rounded-full hover:bg-surface-container transition-all duration-300">
             Ders Programını Gör
